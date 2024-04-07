@@ -1,7 +1,6 @@
 <!doctype html>
 <html>
   <head>
-    <link rel="stylesheet" media="screen" href="/styles.css">
     <title>GMC Jam Home</title>
   </head>
   <body>
@@ -10,6 +9,32 @@
     <div id="countdown_text"></div>
     <div id="countdown_footnote"></div>
     
-    <script src="/countdown.js"></script>
+    <script>
+      let isOnGithub = window.location.href.includes("github.io");
+      window.resPathPrefix = isOnGithub ? "/gmc-jam" : "";
+
+      function linkCss(href) {
+        let cssLink = document.createElement("link");
+        cssLink.rel = "stylesheet";
+        cssLink.type = "text/css"
+        cssLink.media = "screen";
+        cssLink.href = window.resPathPrefix + href;
+
+        document.head.appendChild(cssLink);
+      }
+
+      function linkScript(src) {
+        let scriptLink = document.createElement("script");
+        scriptLink.src = window.resPathPrefix + src;
+        document.head.appendChild(scriptLink);
+      }
+
+      function fetchResource(path) {
+        return fetch(window.resPathPrefix + path);
+      }
+
+      linkCss("/styles.css");
+      linkScript("/countdown.js");
+    </script>
   </body>
 </html>
