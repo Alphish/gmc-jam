@@ -105,9 +105,9 @@ class CountdownService {
     // -------------------
 
     setCountdownText(caption, text, footnote, title) {
-        this.setElementContent("countdown_caption", caption);
-        this.setElementContent("countdown_text", text);
-        this.setElementContent("countdown_footnote", footnote);
+        this.setElementContent("countdown-caption", caption);
+        this.setElementContent("countdown-text", text);
+        this.setElementContent("countdown-footnote", footnote);
         document.title = title;
     }
 

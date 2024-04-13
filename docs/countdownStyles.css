@@ -1,0 +1,14 @@
+.countdown-panel {
+    text-align: center;
+}
+
+#countdown-caption {
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+#countdown-text {
+    margin: 1rem;
+    font-size: 2rem;
+    color: var(--text-highlight);
+}
