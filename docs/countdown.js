@@ -3,16 +3,17 @@ class CountdownService {
     timer = undefined;
 
     start(jamData) {
+        let jamTitle = jamData.title;
         let jamStartTicks = Date.parse(jamData.startTime);
         let jamEndTicks = Date.parse(jamData.endTime);
         let initialNow = Date.now();
 
         if (initialNow < jamStartTicks) {
-            this.beginPreJamCountdown(jamStartTicks);
+            this.beginPreJamCountdown(jamStartTicks, jamTitle);
         } else if (initialNow < jamEndTicks) {
-            this.beginMidJamCountdown(jamEndTicks);
+            this.beginMidJamCountdown(jamEndTicks, jamTitle);
         } else {
-            this.setCountdownText("", "Time's up!", "", "GMC Jam Home");
+            this.setCountdownText(jamTitle + " is finished!", "", "", "GMC Jam Home");
         }
     }
 
@@ -26,11 +27,11 @@ class CountdownService {
         this.timer = setInterval(() => this.processCountdown(), 1000);
     }
 
-    beginPreJamCountdown(target) {
+    beginPreJamCountdown(target, jamTitle) {
         this.beginCountdown({
             countdownTarget: target,
             progressSubtitle: " until Jam starts",
-            progressCaption: "Jam starts in...",
+            progressCaption: jamTitle + " starts in...",
             progressFootnote: undefined,
             finishText: "Let's Jam!",
             finishTitle: "Let's Jam!",
@@ -39,11 +40,11 @@ class CountdownService {
         });
     }
 
-    beginMidJamCountdown(target) {
+    beginMidJamCountdown(target, jamTitle) {
         this.beginCountdown({
             countdownTarget: target,
             progressSubtitle: " until Jam ends",
-            progressCaption: "Jam ends in...",
+            progressCaption: jamTitle + " ends in...",
             progressFootnote: undefined,
             finishText: "Time's up!",
             finishTitle: "Time's up!",
