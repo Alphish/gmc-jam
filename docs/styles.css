@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+:root {
+    --background-main: #292929;
+    --text-basic: #d5d5d5;
+    --text-highlight: #88d658;
+}
+
+html, body {
+    margin: 0px;
+    font-size: 16px;
+    font-family: "Nunito",Arial,Verdana,Helvetica,sans-serif;
+    height: 100%;
+    background-color: var(--background-main);
+    color: var(--text-basic);
+}
