@@ -118,7 +118,9 @@ class CountdownService {
 }
 
 // initialising the countdown
-fetch("/currentJam.json")
+fetch("/jams/jamlist.json")
+    .then(response => response.json())
+    .then(jamlist => fetch("/jams/" + jamlist[0].filename + ".json"))
     .then(response => response.json())
     .then(jamData => {
         let countdown = new CountdownService();
