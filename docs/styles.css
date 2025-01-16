@@ -8,9 +8,35 @@
 
 html, body {
     margin: 0px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     font-size: 16px;
     font-family: "Nunito",Arial,Verdana,Helvetica,sans-serif;
-    height: 100%;
     background-color: var(--background-main);
     color: var(--text-basic);
+}
+
+.content {
+    flex-grow: 1;
+}
+
+.footer {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 1rem;
+    color: #777777;
+    background-color: #222222;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #a7a7a7;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+    color: #c5c5c5;
 }
