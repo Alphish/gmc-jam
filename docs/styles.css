@@ -10,6 +10,8 @@ html, body {
     margin: 0px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 100%;
     height: 100%;
     font-size: 16px;
     font-family: "Nunito",Arial,Verdana,Helvetica,sans-serif;
@@ -17,7 +19,13 @@ html, body {
     color: var(--text-basic);
 }
 
+h1 {
+    text-align: center;
+}
+
 .content {
+    width: 100%;
+    max-width: 60rem;
     flex-grow: 1;
 }
 
