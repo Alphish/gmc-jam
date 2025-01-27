@@ -1,4 +1,5 @@
 [
-    { "filename": "gmcjam-055a" },
-    { "filename": "gmcjam-054a" }
+    { "id": "gmcjam-055a", "title": "???", "theme": "???", "date": "26/02/25", "hosts": "Evanski, Alice" },
+    { "id": "gmcjam-054a", "title": "The Spooky Scary GMC Jam 54", "theme": "REVOLUTION", "date": "28/11/24", "hosts": "Evanski, Alice" },
+    { "id": "gmcjam-053a", "title": "The Watery GMC Jam 53", "theme": "IN A SIMULATION", "date": "29/08/24", "hosts": "Evanski, Alice" }
 ]
