@@ -38,17 +38,21 @@
 }
 
 #jamlist-table td, #jamlist-table th {
-    padding: 0.375rem 0.5rem;
+    padding: 0.375rem 1rem;
 }
 
-td.jam-theme {
+#jamlist-table .jam-title {
+    text-align: left;
+}
+
+#jamlist-table .jam-theme {
+    text-align: left;
+}
+
+#jamlist-table .jam-date {
     text-align: center;
 }
 
-td.jam-date {
-    text-align: center;
-}
-
-td.jam-hosts {
+#jamlist-table .jam-hosts {
     text-align: center;
 }
