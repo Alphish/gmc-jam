@@ -10,6 +10,8 @@ html, body {
     margin: 0px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 100%;
     height: 100%;
     font-size: 16px;
     font-family: "Nunito",Arial,Verdana,Helvetica,sans-serif;
@@ -17,9 +19,59 @@ html, body {
     color: var(--text-basic);
 }
 
+a {
+    text-decoration: none;
+}
+
+/* NAVBAR */
+
+.navbar {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    color: #777777;
+    background-color: #1c1c1c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar > div {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    width: 100%;
+    max-width: 60rem;
+}
+
+.navbar .homelink {
+    display: flex;
+    flex-grow: 1
+}
+
+.navbar .sidelink {
+    padding: 0.5rem 1rem;
+    color: #c5c5c5;
+}
+
+.navbar .sidelink:hover {
+    background-color: #c5c5c510;
+    border-radius: 0.5rem;
+}
+
+/* CONTENT */
+
 .content {
+    width: 100%;
+    max-width: 60rem;
     flex-grow: 1;
 }
+
+h1 {
+    text-align: center;
+}
+
+/* FOOTER */
 
 .footer {
     width: 100%;
@@ -32,7 +84,6 @@ html, body {
 }
 
 .footer a {
-    text-decoration: none;
     color: #a7a7a7;
 }
 
