@@ -1,8 +1,8 @@
 <!doctype html>
 <html>
   <head>
-    <link rel="stylesheet" media="screen" href="/styles.css">
-    <link rel="stylesheet" media="screen" href="/jamlistStyles.css">
+    <link rel="stylesheet" media="screen" href="/pages/styles.css">
+    <link rel="stylesheet" media="screen" href="/pages/jamlist/jamlist.css">
     <title>List of Jams | GMC Jam</title>
   </head>
   <body>
@@ -18,17 +18,16 @@
 
     <div class="content">
       <h1>List of GMC Jams</h1>
-      <table id="jamlist-table">
+      <table class="basic-table">
         <thead>
-          <tr id="header-row">
+          <tr>
             <th class="jam-title">Jam</th>
             <th class="jam-theme">Theme</th>
             <th class="jam-date">Date</th>
             <th class="jam-hosts">Host(s)</th>
           </tr>
         </thead>
-        <tbody id="jamlist-entries">
-        </tbody>
+        <tbody id="jamlist-entries"></tbody>
       </table>
     </div>
     
@@ -38,6 +37,6 @@
         The website is not affiliated with YoYo Games or GameMaker
     </div>
 
-    <script src="/jamlist.js"></script>
+    <script src="/pages/jamlist/jamlist.js"></script>
   </body>
 </html>

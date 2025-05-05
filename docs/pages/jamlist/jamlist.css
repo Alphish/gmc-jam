@@ -1,0 +1,15 @@
+tr .jam-title {
+    text-align: left;
+}
+
+tr .jam-theme {
+    text-align: left;
+}
+
+tr .jam-date {
+    text-align: center;
+}
+
+tr .jam-hosts {
+    text-align: center;
+}

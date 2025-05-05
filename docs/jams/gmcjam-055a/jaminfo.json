@@ -1,6 +1,14 @@
 {
     "title": "The Chocolatey GMC Jam 55",
-    "theme": "ADRENALINE",
+    "logoPath": "logo.png",
     "startTime": "2025-02-26T12:00:00.000Z",
-    "endTime": "2025-03-03T12:00:00.000Z"
+    "endTime": "2025-03-03T12:00:00.000Z",
+    "theme": "Adrenaline",
+    "hosts": ["Evanski", "Alice"],
+    "links": [
+        { "title": "Discussion topic", "url": "https://forum.gamemaker.io/index.php?threads/the-chocolatey-gmc-jam-55.117826/" },
+        { "title": "Games topic", "url": "https://forum.gamemaker.io/index.php?threads/the-chocolatey-gmc-jam-55-games-topic.118294/" },
+        { "title": "Voting topic", "url": "https://forum.gamemaker.io/index.php?threads/the-chocolatey-gmc-jam-55-voting-topic.118412/" },
+        { "title": "Results topic", "url": "https://forum.gamemaker.io/index.php?threads/the-chocolatey-gmc-jam-55-results.118750/" }
+    ]
 }

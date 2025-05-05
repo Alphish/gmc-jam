@@ -1,6 +1,14 @@
 {
     "title": "The Lucky GMC Jam 52",
-    "theme": "DREAMS & NIGHTMARES",
+    "logoPath": "logo.png",
     "startTime": "2024-05-30T12:00:00.000Z",
-    "endTime": "2024-06-03T12:00:00.000Z"
+    "endTime": "2024-06-03T12:00:00.000Z",
+    "theme": "Dreams & Nightmares",
+    "hosts": ["Evanski", "Alice"],
+    "links": [
+        { "title": "Discussion topic", "url": "https://forum.gamemaker.io/index.php?threads/the-lucky-gmc-jam-52.112061/" },
+        { "title": "Games topic", "url": "https://forum.gamemaker.io/index.php?threads/gmc-jam-52-games-topic.112940/" },
+        { "title": "Voting topic", "url": "https://forum.gamemaker.io/index.php?threads/the-lucky-gmc-jam-52-voting-topic.113065/" },
+        { "title": "Results topic", "url": "https://forum.gamemaker.io/index.php?threads/the-lucky-gmc-jam-52-results.113454/" }
+    ]
 }
