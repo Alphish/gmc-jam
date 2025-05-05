@@ -1,6 +1,14 @@
 {
     "title": "The Timely GMC Jam 51",
-    "theme": "CLEANING UP",
+    "logoPath": "logo.png",
     "startTime": "2024-02-29T12:00:00.000Z",
-    "endTime": "2024-03-04T12:00:00.000Z"
+    "endTime": "2024-03-04T12:00:00.000Z",
+    "theme": "Cleaning Up",
+    "hosts": ["Evanski", "Alice"],
+    "links": [
+        { "title": "Discussion topic", "url": "https://forum.gamemaker.io/index.php?threads/the-timely-gmc-jam-51.109156/" },
+        { "title": "Games topic", "url": "https://forum.gamemaker.io/index.php?threads/the-timely-gmc-jam-51-games-topic.109811/" },
+        { "title": "Voting topic", "url": "https://forum.gamemaker.io/index.php?threads/the-timely-gmc-jam-51-voting-topic.109971/" },
+        { "title": "Results topic", "url": "https://forum.gamemaker.io/index.php?threads/gmc-jam-51-results.110649/" }
+    ]
 }

@@ -1,6 +1,14 @@
 {
     "title": "The Watery GMC Jam 53",
-    "theme": "IN A SIMULATION",
+    "logoPath": "logo.png",
     "startTime": "2024-08-29T12:00:00.000Z",
-    "endTime": "2024-09-02T12:00:00.000Z"
+    "endTime": "2024-09-02T12:00:00.000Z",
+    "theme": "In a Simulation",
+    "hosts": ["Evanski", "Alice"],
+    "links": [
+        { "title": "Discussion topic", "url": "https://forum.gamemaker.io/index.php?threads/the-watery-gmc-jam-53.114554/" },
+        { "title": "Games topic", "url": "https://forum.gamemaker.io/index.php?threads/the-watery-gmc-jam-53-games-topic.115184/" },
+        { "title": "Voting topic", "url": "https://forum.gamemaker.io/index.php?threads/the-watery-gmc-jam-53-voting-topic.115276/" },
+        { "title": "Results topic", "url": "https://forum.gamemaker.io/index.php?threads/the-watery-gmc-jam-53-results.115620/" }
+    ]
 }

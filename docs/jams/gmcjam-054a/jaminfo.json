@@ -1,6 +1,14 @@
 {
     "title": "The Spooky Scary GMC Jam 54",
-    "theme": "REVOLUTION",
+    "logoPath": "logo.png",
     "startTime": "2024-11-28T12:00:00.000Z",
-    "endTime": "2024-12-02T12:00:00.000Z"
+    "endTime": "2024-12-02T12:00:00.000Z",
+    "theme": "Revolution",
+    "hosts": ["Evanski", "Alice"],
+    "links": [
+        { "title": "Discussion topic", "url": "https://forum.gamemaker.io/index.php?threads/the-spooky-scary-gmc-jam-54.116240/" },
+        { "title": "Games topic", "url": "https://forum.gamemaker.io/index.php?threads/the-spooky-scary-gmc-jam-54-games-topic.116707/" },
+        { "title": "Voting topic", "url": "https://forum.gamemaker.io/index.php?threads/the-spooky-scary-gmc-jam-54-voting-topic.116783/" },
+        { "title": "Results topic", "url": "https://forum.gamemaker.io/index.php?threads/gmc-jam-54-results.117158/" }
+    ]
 }
