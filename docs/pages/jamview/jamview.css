@@ -33,3 +33,59 @@
 #overview-container tr .overview-link {
     text-align: center;
 }
+
+table.basic-table tbody tr.spanning-odd {
+    background-color: #3d3d3d;
+}
+
+table.basic-table tbody tr.spanning-even {
+    background-color: #303030;
+}
+
+#awards-entries, #awards-entries a {
+    color: #22d290;
+}
+
+#awards-entries tr.spanning-odd {
+    background-color: #123d2d;
+}
+
+#awards-entries tr.spanning-even {
+    background-color: #083022;
+}
+
+table.basic-table.ranking tbody tr:nth-child(1) {
+    background-color: #4c3c18;
+    color: #ddaa22;
+}
+
+table.basic-table.ranking tbody tr:nth-child(2) {
+    background-color: #606870;
+    color: #ddffff;
+}
+
+table.basic-table.ranking tbody tr:nth-child(3) {
+    background-color: #4c3010;
+    color: #dd8822;
+}
+
+table.basic-table.ranking tbody tr:nth-child(1) a {
+    color: #ddaa22;
+}
+
+table.basic-table.ranking tbody tr:nth-child(2) a {
+    color: #ddffff;
+}
+
+table.basic-table.ranking tbody tr:nth-child(3) a {
+    color: #dd8822;
+}
+
+table.basic-table tbody .entry-label-column {
+    font-weight: bold;
+}
+
+table.basic-table.ranking tbody .entry-label-column {
+    width: 2rem;
+    text-align: center;
+}
