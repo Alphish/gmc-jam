@@ -9,10 +9,12 @@
     "name":"Default",
   },
   "defaultScriptType":1,
-  "IncludedFiles":[],
   "Folders":[
     {"$GMFolder":"","%Name":"Database","folderPath":"folders/Database.yy","name":"Database","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Utils","folderPath":"folders/Utils.yy","name":"Utils","resourceType":"GMFolder","resourceVersion":"2.0",},
+  ],
+  "IncludedFiles":[
+    {"$GMIncludedFile":"","%Name":"all.participants.json","CopyToMask":-1,"filePath":"datafiles","name":"all.participants.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
   ],
   "isEcma":false,
   "LibraryEmitters":[],
