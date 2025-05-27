@@ -21,7 +21,8 @@
   },
   "name":"Page Generator",
   "resources":[
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"obj_Generator","path":"objects/obj_Generator/obj_Generator.yy",},},
+    {"id":{"name":"rm_Generator","path":"rooms/rm_Generator/rm_Generator.yy",},},
     {"id":{"name":"ctor_Database","path":"scripts/ctor_Database/ctor_Database.yy",},},
     {"id":{"name":"ctor_DbParticipant","path":"scripts/ctor_DbParticipant/ctor_DbParticipant.yy",},},
     {"id":{"name":"utils_File","path":"scripts/utils_File/utils_File.yy",},},
@@ -30,7 +31,7 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"rm_Generator","path":"rooms/rm_Generator/rm_Generator.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
