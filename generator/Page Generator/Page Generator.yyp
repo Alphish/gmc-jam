@@ -9,8 +9,10 @@
     "name":"Default",
   },
   "defaultScriptType":1,
-  "Folders":[],
   "IncludedFiles":[],
+  "Folders":[
+    {"$GMFolder":"","%Name":"Utils","folderPath":"folders/Utils.yy","name":"Utils","resourceType":"GMFolder","resourceVersion":"2.0",},
+  ],
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
@@ -19,6 +21,8 @@
   "name":"Page Generator",
   "resources":[
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"utils_File","path":"scripts/utils_File/utils_File.yy",},},
+    {"id":{"name":"utils_Json","path":"scripts/utils_Json/utils_Json.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
