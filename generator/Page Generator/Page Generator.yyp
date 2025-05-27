@@ -11,6 +11,7 @@
   "defaultScriptType":1,
   "IncludedFiles":[],
   "Folders":[
+    {"$GMFolder":"","%Name":"Database","folderPath":"folders/Database.yy","name":"Database","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Utils","folderPath":"folders/Utils.yy","name":"Utils","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "isEcma":false,
@@ -21,6 +22,8 @@
   "name":"Page Generator",
   "resources":[
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"ctor_Database","path":"scripts/ctor_Database/ctor_Database.yy",},},
+    {"id":{"name":"ctor_DbParticipant","path":"scripts/ctor_DbParticipant/ctor_DbParticipant.yy",},},
     {"id":{"name":"utils_File","path":"scripts/utils_File/utils_File.yy",},},
     {"id":{"name":"utils_Json","path":"scripts/utils_Json/utils_Json.yy",},},
   ],
