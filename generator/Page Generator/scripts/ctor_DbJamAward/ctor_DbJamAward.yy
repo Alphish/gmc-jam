@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ctor_DbJamAward",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ctor_DbJamAward",
+  "parent":{
+    "name":"Database",
+    "path":"folders/Database.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

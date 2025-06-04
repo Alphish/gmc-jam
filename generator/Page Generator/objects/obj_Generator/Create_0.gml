@@ -5,3 +5,4 @@ var _project_directory = string_copy(_project_filename, 1, string_last_pos("/", 
 var _datafiles_directory = _project_directory + "datafiles/";
 
 remaining_participant_files = file_find_all(_datafiles_directory, "*.participants.json");
+remaining_jam_files = file_find_all(_datafiles_directory, "*.jam.json");
