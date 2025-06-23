@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ctor_StringWriter",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ctor_StringWriter",
+  "parent":{
+    "name":"Writing",
+    "path":"folders/Writing.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

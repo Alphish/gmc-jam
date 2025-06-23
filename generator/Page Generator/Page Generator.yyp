@@ -1,0 +1,54 @@
+{
+  "$GMProject":"",
+  "%Name":"Page Generator",
+  "AudioGroups":[
+    {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
+  ],
+  "configs":{
+    "children":[],
+    "name":"Default",
+  },
+  "defaultScriptType":1,
+  "Folders":[
+    {"$GMFolder":"","%Name":"Database","folderPath":"folders/Database.yy","name":"Database","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Filesystem","folderPath":"folders/Filesystem.yy","name":"Filesystem","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Utils","folderPath":"folders/Utils.yy","name":"Utils","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Writing","folderPath":"folders/Writing.yy","name":"Writing","resourceType":"GMFolder","resourceVersion":"2.0",},
+  ],
+  "IncludedFiles":[
+    {"$GMIncludedFile":"","%Name":"all.participants.json","CopyToMask":-1,"filePath":"datafiles","name":"all.participants.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"gmcjam-055a.jam.json","CopyToMask":-1,"filePath":"datafiles","name":"gmcjam-055a.jam.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+  ],
+  "isEcma":false,
+  "LibraryEmitters":[],
+  "MetaData":{
+    "IDEVersion":"2024.11.0.179",
+  },
+  "name":"Page Generator",
+  "resources":[
+    {"id":{"name":"obj_Generator","path":"objects/obj_Generator/obj_Generator.yy",},},
+    {"id":{"name":"rm_Generator","path":"rooms/rm_Generator/rm_Generator.yy",},},
+    {"id":{"name":"ctor_Database","path":"scripts/ctor_Database/ctor_Database.yy",},},
+    {"id":{"name":"ctor_DbJam","path":"scripts/ctor_DbJam/ctor_DbJam.yy",},},
+    {"id":{"name":"ctor_DbJamAuthor","path":"scripts/ctor_DbJamAuthor/ctor_DbJamAuthor.yy",},},
+    {"id":{"name":"ctor_DbJamAward","path":"scripts/ctor_DbJamAward/ctor_DbJamAward.yy",},},
+    {"id":{"name":"ctor_DbJamEntry","path":"scripts/ctor_DbJamEntry/ctor_DbJamEntry.yy",},},
+    {"id":{"name":"ctor_DbJamTeam","path":"scripts/ctor_DbJamTeam/ctor_DbJamTeam.yy",},},
+    {"id":{"name":"ctor_DbParticipant","path":"scripts/ctor_DbParticipant/ctor_DbParticipant.yy",},},
+    {"id":{"name":"ctor_Filesystem","path":"scripts/ctor_Filesystem/ctor_Filesystem.yy",},},
+    {"id":{"name":"ctor_JamDataGenerator","path":"scripts/ctor_JamDataGenerator/ctor_JamDataGenerator.yy",},},
+    {"id":{"name":"ctor_JsonWriter","path":"scripts/ctor_JsonWriter/ctor_JsonWriter.yy",},},
+    {"id":{"name":"ctor_StringWriter","path":"scripts/ctor_StringWriter/ctor_StringWriter.yy",},},
+    {"id":{"name":"utils_File","path":"scripts/utils_File/utils_File.yy",},},
+    {"id":{"name":"utils_Json","path":"scripts/utils_Json/utils_Json.yy",},},
+  ],
+  "resourceType":"GMProject",
+  "resourceVersion":"2.0",
+  "RoomOrderNodes":[
+    {"roomId":{"name":"rm_Generator","path":"rooms/rm_Generator/rm_Generator.yy",},},
+  ],
+  "templateType":"game",
+  "TextureGroups":[
+    {"$GMTextureGroup":"","%Name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"name":"Default","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
+  ],
+}
