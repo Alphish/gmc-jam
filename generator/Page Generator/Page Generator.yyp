@@ -13,6 +13,7 @@
     {"$GMFolder":"","%Name":"Database","folderPath":"folders/Database.yy","name":"Database","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Filesystem","folderPath":"folders/Filesystem.yy","name":"Filesystem","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Utils","folderPath":"folders/Utils.yy","name":"Utils","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Writing","folderPath":"folders/Writing.yy","name":"Writing","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "IncludedFiles":[
     {"$GMIncludedFile":"","%Name":"all.participants.json","CopyToMask":-1,"filePath":"datafiles","name":"all.participants.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
@@ -35,6 +36,9 @@
     {"id":{"name":"ctor_DbJamTeam","path":"scripts/ctor_DbJamTeam/ctor_DbJamTeam.yy",},},
     {"id":{"name":"ctor_DbParticipant","path":"scripts/ctor_DbParticipant/ctor_DbParticipant.yy",},},
     {"id":{"name":"ctor_Filesystem","path":"scripts/ctor_Filesystem/ctor_Filesystem.yy",},},
+    {"id":{"name":"ctor_JamDataGenerator","path":"scripts/ctor_JamDataGenerator/ctor_JamDataGenerator.yy",},},
+    {"id":{"name":"ctor_JsonWriter","path":"scripts/ctor_JsonWriter/ctor_JsonWriter.yy",},},
+    {"id":{"name":"ctor_StringWriter","path":"scripts/ctor_StringWriter/ctor_StringWriter.yy",},},
     {"id":{"name":"utils_File","path":"scripts/utils_File/utils_File.yy",},},
     {"id":{"name":"utils_Json","path":"scripts/utils_Json/utils_Json.yy",},},
   ],
