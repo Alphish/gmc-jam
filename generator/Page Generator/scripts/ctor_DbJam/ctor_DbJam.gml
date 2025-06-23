@@ -1,8 +1,10 @@
 function DbJam(_data) constructor {
     data = _data;
-    
     id = _data.id;
+    info_directory = Filesystem.get_jam_directory(id);
+    
     title = _data[$ "title"];
+    logo_path = file_exists(info_directory + "logo.png") ? "logo.png" : undefined;
     start_time = _data[$ "startTime"];
     end_time = _data[$ "endTime"];
     theme = _data[$ "theme"];
