@@ -16,3 +16,9 @@ function Database() constructor {
         jams_by_id[$ _jam.id] = _jam;
     }
 }
+
+Database.instance = new Database();
+
+Database.get_participant = function(_id) {
+    return Database.instance.participants_by_id[$ _id];
+}

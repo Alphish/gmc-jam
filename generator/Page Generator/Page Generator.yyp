@@ -28,6 +28,7 @@
     {"id":{"name":"rm_Generator","path":"rooms/rm_Generator/rm_Generator.yy",},},
     {"id":{"name":"ctor_Database","path":"scripts/ctor_Database/ctor_Database.yy",},},
     {"id":{"name":"ctor_DbJam","path":"scripts/ctor_DbJam/ctor_DbJam.yy",},},
+    {"id":{"name":"ctor_DbJamAuthor","path":"scripts/ctor_DbJamAuthor/ctor_DbJamAuthor.yy",},},
     {"id":{"name":"ctor_DbJamAward","path":"scripts/ctor_DbJamAward/ctor_DbJamAward.yy",},},
     {"id":{"name":"ctor_DbJamEntry","path":"scripts/ctor_DbJamEntry/ctor_DbJamEntry.yy",},},
     {"id":{"name":"ctor_DbJamTeam","path":"scripts/ctor_DbJamTeam/ctor_DbJamTeam.yy",},},

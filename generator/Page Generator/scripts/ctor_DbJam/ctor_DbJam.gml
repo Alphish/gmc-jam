@@ -1,4 +1,4 @@
-function DbJam(_data, _db) constructor {
+function DbJam(_data) constructor {
     data = _data;
     
     id = _data.id;
@@ -6,7 +6,7 @@ function DbJam(_data, _db) constructor {
     start_time = _data[$ "startTime"];
     end_time = _data[$ "endTime"];
     theme = _data[$ "theme"];
-    hosts = _data[$ "hosts"];
+    hosts = array_map(_data[$ "hosts"], Database.get_participant);
     links = _data[$ "links"];
     
     // -------
@@ -17,11 +17,11 @@ function DbJam(_data, _db) constructor {
     entries_by_id = {};
     
     var _jam = self;
-    array_foreach(_data[$ "entries"] ?? [], method({ jam: _jam, database: _db }, function(_entry_data) {
-        var _entry = new DbJamEntry(jam, _entry_data, database);
-        array_push(jam.entries, _entry);
-        jam.entries_by_id[$ _entry.id] = _entry;
-    }));
+    array_foreach(_data[$ "entries"] ?? [], function(_entry_data) {
+        var _entry = new DbJamEntry(self, _entry_data);
+        array_push(entries, _entry);
+        entries_by_id[$ _entry.id] = _entry;
+    });
     
     // -------
     // Results
@@ -32,7 +32,7 @@ function DbJam(_data, _db) constructor {
     ranking = array_map(_ranking_data, function(_id) { return entries_by_id[$ _id]; });
     
     var _awards_data = _results_data[$ "awards"] ?? [];
-    awards = array_map(_awards_data, method({ jam: _jam, database: _db }, function(_data) {
-        return new DbJamAward(jam, _data, database);
-    }));
+    awards = array_map(_awards_data, function(_data) {
+        return new DbJamAward(self, _data);
+    });
 }
