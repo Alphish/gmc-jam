@@ -1,8 +1,8 @@
-database = new Database();
+filesystem = Filesystem.instance;
+database = Database.instance;
 
-var _project_filename = string_replace_all(GM_project_filename, "\\", "/");
-var _project_directory = string_copy(_project_filename, 1, string_last_pos("/", _project_filename));
-var _datafiles_directory = _project_directory + "datafiles/";
+remaining_participant_files = filesystem.get_datafiles("*.participants.json");
+remaining_jam_files = filesystem.get_datafiles("*.jam.json");
+remaining_jams = [];
 
-remaining_participant_files = file_find_all(_datafiles_directory, "*.participants.json");
-remaining_jam_files = file_find_all(_datafiles_directory, "*.jam.json");
+jam_generator = new JamDataGenerator();
