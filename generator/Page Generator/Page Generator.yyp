@@ -11,6 +11,7 @@
   "defaultScriptType":1,
   "Folders":[
     {"$GMFolder":"","%Name":"Database","folderPath":"folders/Database.yy","name":"Database","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Filesystem","folderPath":"folders/Filesystem.yy","name":"Filesystem","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Utils","folderPath":"folders/Utils.yy","name":"Utils","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "IncludedFiles":[
@@ -33,6 +34,7 @@
     {"id":{"name":"ctor_DbJamEntry","path":"scripts/ctor_DbJamEntry/ctor_DbJamEntry.yy",},},
     {"id":{"name":"ctor_DbJamTeam","path":"scripts/ctor_DbJamTeam/ctor_DbJamTeam.yy",},},
     {"id":{"name":"ctor_DbParticipant","path":"scripts/ctor_DbParticipant/ctor_DbParticipant.yy",},},
+    {"id":{"name":"ctor_Filesystem","path":"scripts/ctor_Filesystem/ctor_Filesystem.yy",},},
     {"id":{"name":"utils_File","path":"scripts/utils_File/utils_File.yy",},},
     {"id":{"name":"utils_Json","path":"scripts/utils_Json/utils_Json.yy",},},
   ],
