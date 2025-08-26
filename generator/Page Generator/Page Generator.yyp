@@ -12,6 +12,7 @@
   "Folders":[
     {"$GMFolder":"","%Name":"Database","folderPath":"folders/Database.yy","name":"Database","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Filesystem","folderPath":"folders/Filesystem.yy","name":"Filesystem","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Import","folderPath":"folders/Import.yy","name":"Import","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Utils","folderPath":"folders/Utils.yy","name":"Utils","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Writing","folderPath":"folders/Writing.yy","name":"Writing","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
@@ -33,7 +34,9 @@
     {"id":{"name":"ctor_DbJamAuthor","path":"scripts/ctor_DbJamAuthor/ctor_DbJamAuthor.yy",},},
     {"id":{"name":"ctor_DbJamAward","path":"scripts/ctor_DbJamAward/ctor_DbJamAward.yy",},},
     {"id":{"name":"ctor_DbJamEntry","path":"scripts/ctor_DbJamEntry/ctor_DbJamEntry.yy",},},
+    {"id":{"name":"ctor_DbJamImporter","path":"scripts/ctor_DbJamImporter/ctor_DbJamImporter.yy",},},
     {"id":{"name":"ctor_DbJamTeam","path":"scripts/ctor_DbJamTeam/ctor_DbJamTeam.yy",},},
+    {"id":{"name":"ctor_DbJamWriter","path":"scripts/ctor_DbJamWriter/ctor_DbJamWriter.yy",},},
     {"id":{"name":"ctor_DbParticipant","path":"scripts/ctor_DbParticipant/ctor_DbParticipant.yy",},},
     {"id":{"name":"ctor_Filesystem","path":"scripts/ctor_Filesystem/ctor_Filesystem.yy",},},
     {"id":{"name":"ctor_JamDataGenerator","path":"scripts/ctor_JamDataGenerator/ctor_JamDataGenerator.yy",},},

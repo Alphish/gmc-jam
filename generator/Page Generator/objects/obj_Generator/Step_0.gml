@@ -7,6 +7,12 @@ if (array_length(remaining_participant_files) > 0) {
     return;
 }
 
+if (array_length(remaining_imports) > 0) {
+    var _import = remaining_imports[0];
+    if (_import.process_next())
+        array_shift(remaining_imports);
+}
+
 if (array_length(remaining_jam_files) > 0) {
     var _file = array_shift(remaining_jam_files);
     var _jam_data = json_load(_file);

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ctor_DbJamWriter",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ctor_DbJamWriter",
+  "parent":{
+    "name":"Import",
+    "path":"folders/Import.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
