@@ -1,6 +1,14 @@
 {
-    "title": "The Pickled GMC Jam 56",
-    "theme": "All or Nothing",
-    "startTime": "2025-06-25T12:00:00.000Z",
-    "endTime": "2025-06-30T12:00:00.000Z"
+"title":"The Pickled GMC Jam 56",
+"logoPath":"logo.png",
+"startTime":"2025-06-25T12:00:00Z",
+"endTime":"2025-06-30T12:00:00Z",
+"theme":"All or Nothing",
+"hosts":["Misu","Alice"],
+"links":[
+{"title":"Discussion topic","url":"https://forum.gamemaker.io/index.php?threads/the-pickled-gmc-jam-56.119714/"},
+{"title":"Games topic","url":"https://forum.gamemaker.io/index.php?threads/the-pickled-gmc-jam-56-games-topic.120135/"},
+{"title":"Voting topic","url":"https://forum.gamemaker.io/index.php?threads/the-pickled-gmc-jam-56-voting-topic.120221/"},
+{"title":"Results topic","url":"https://forum.gamemaker.io/index.php?threads/the-pickled-gmc-jam-56-results.120453/"}
+]
 }
