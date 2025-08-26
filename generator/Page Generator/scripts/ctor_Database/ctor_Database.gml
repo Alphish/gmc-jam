@@ -1,6 +1,7 @@
 function Database() constructor {
     participants = [];
     participants_by_id = {};
+    participants_by_name = {};
     jams = [];
     jams_by_id = {};
     
@@ -8,6 +9,7 @@ function Database() constructor {
         array_foreach(_participants, function(_participant) {
             array_push(participants, _participant);
             participants_by_id[$ string_lower(_participant.id)] = _participant;
+            participants_by_name[$ string_lower(_participant.name)] = _participant;
         });
     }
     
@@ -21,4 +23,12 @@ Database.instance = new Database();
 
 Database.get_participant = function(_id) {
     return Database.instance.participants_by_id[$ _id];
+}
+
+Database.get_participant_id = function(_name) {
+    _name = string_lower(_name);
+    if (!struct_exists(Database.instance.participants_by_name, _name))
+        throw $"Could not find participant: '{_name}'.";
+    
+    return Database.instance.participants_by_name[$ _name].id;
 }
