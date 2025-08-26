@@ -41,12 +41,12 @@ function JamDataGenerator() constructor {
             _writer.write_multiline_array(_jam.links, JamDataGenerator.write_link);
         }
         
-        if (!is_undefined(_jam.entries)) {
+        if (is_array_nonempty(_jam.entries)) {
             _next = _writer.write_key("entries", _next);
             _writer.write_multiline_array(_jam.entries, JamDataGenerator.write_entry);
         }
         
-        if (!is_undefined(_jam.ranking) || !is_undefined(_jam.awards)) {
+        if (is_array_nonempty(_jam.ranking) || is_array_nonempty(_jam.awards)) {
             _next = _writer.write_key("results", _next);
             write_results(_writer, _jam);
         }
@@ -104,12 +104,12 @@ function JamDataGenerator() constructor {
         _writer.write("{");
         
         var _next = false;
-        if (!is_undefined(_jam.ranking)) {
+        if (is_array_nonempty(_jam.ranking)) {
             _next = _writer.write_key("ranking", _next);
             _writer.write_multiline_array(_jam.ranking, JamDataGenerator.write_entry_id);
         }
         
-        if (!is_undefined(_jam.awards)) {
+        if (is_array_nonempty(_jam.awards)) {
             _next = _writer.write_key("awards", _next);
             _writer.write_multiline_array(_jam.awards, JamDataGenerator.write_award);
         }

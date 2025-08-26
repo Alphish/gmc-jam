@@ -39,6 +39,7 @@
     {"id":{"name":"ctor_JamDataGenerator","path":"scripts/ctor_JamDataGenerator/ctor_JamDataGenerator.yy",},},
     {"id":{"name":"ctor_JsonWriter","path":"scripts/ctor_JsonWriter/ctor_JsonWriter.yy",},},
     {"id":{"name":"ctor_StringWriter","path":"scripts/ctor_StringWriter/ctor_StringWriter.yy",},},
+    {"id":{"name":"utils_Array","path":"scripts/utils_Array/utils_Array.yy",},},
     {"id":{"name":"utils_File","path":"scripts/utils_File/utils_File.yy",},},
     {"id":{"name":"utils_Json","path":"scripts/utils_Json/utils_Json.yy",},},
   ],
