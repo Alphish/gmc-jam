@@ -34,9 +34,14 @@ function DbJamWriter() constructor {
             _writer.write_inline_array(_data.hosts, DbJamWriter.write_host);
         }
         
-        if (!is_undefined(_data.links)) {
+        if (is_nonempty_array(_data.links)) {
             _next = _writer.write_key("links", _next);
             _writer.write_multiline_array(_data.links, DbJamWriter.write_link);
+        }
+        
+        if (is_nonempty_array(_data.entries)) {
+            _next = _writer.write_key("entries", _next);
+            _writer.write_multiline_array(_data.entries, DbJamWriter.write_entry);
         }
         
         _writer.write("\n}");
@@ -56,5 +61,48 @@ function DbJamWriter() constructor {
         _writer.write_key("url");
         _writer.write_string(_link.url);
         _writer.write("}");
+    }
+    
+    // -------
+    // Entries
+    // -------
+    
+    static write_entry = function(_writer, _entry) {
+        _writer.write("{");
+        _writer.write_key("id");
+        _writer.write_string(_entry.page_id);
+        _writer.write(",");
+        _writer.write_key("name");
+        _writer.write_string(_entry.title);
+        _writer.write(",");
+        _writer.write_key("team");
+        
+        if (is_nonempty_string(_entry.team[$ "name"])) {
+            _writer.write("{");
+            _writer.write_key("name");
+            _writer.write_string(_entry.team.name);
+            _writer.write(",");
+            _writer.write_key("authors");
+        }
+        _writer.write_inline_array(_entry.team.authors, DbJamWriter.write_author);
+        if (is_nonempty_string(_entry.team[$ "name"])) {
+            _writer.write("}");
+        }
+        
+        _writer.write("}");
+    }
+    
+    static write_author = function(_writer, _author) {
+        if (string_lower(_author.name) == string_lower(_author.participant.name)) {
+            _writer.write_string(_author.id);
+        } else {
+            _writer.write("{");
+            _writer.write_key("id");
+            _writer.write_string(_author.id);
+            _writer.write(",");
+            _writer.write_key("alias");
+            _writer.write_string(_author.name);
+            _writer.write("}");
+        }
     }
 }

@@ -46,6 +46,7 @@
     {"id":{"name":"utils_Array","path":"scripts/utils_Array/utils_Array.yy",},},
     {"id":{"name":"utils_File","path":"scripts/utils_File/utils_File.yy",},},
     {"id":{"name":"utils_Json","path":"scripts/utils_Json/utils_Json.yy",},},
+    {"id":{"name":"utils_String","path":"scripts/utils_String/utils_String.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
