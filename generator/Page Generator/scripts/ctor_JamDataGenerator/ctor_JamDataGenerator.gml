@@ -84,15 +84,28 @@ function JamDataGenerator() constructor {
         _writer.write(",");
         _writer.write_string(_entry.name);
         _writer.write(",");
-        _writer.write_inline_array(_entry.team.authors, JamDataGenerator.write_author);
+        
+        var _team_members = variable_clone(_entry.team.authors, 1);
+        if (is_nonempty_string(_entry.team.name))
+            array_insert(_team_members, 0, _entry.team.name);
+        
+        _writer.write_inline_array(_team_members, JamDataGenerator.write_team_member);
+        
         _writer.write("]");
     }
     
-    static write_author = function(_writer, _author) {
+    static write_team_member = function(_writer, _member) {
+        if (is_string(_member)) {
+            // team name
+            _writer.write_string(_member);
+            return;
+        }
+        
+        // team author
         _writer.write("[");
-        _writer.write_string(_author.id);
+        _writer.write_string(_member.id);
         _writer.write(",");
-        _writer.write_string(_author.name);
+        _writer.write_string(_member.name);
         _writer.write("]");
     }
     
