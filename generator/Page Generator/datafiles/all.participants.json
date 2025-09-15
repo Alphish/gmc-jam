@@ -1,5 +1,9 @@
 [
   {
+    "id": "alexx",
+    "name": "Alexx"
+  },
+  {
     "id": "alice",
     "name": "Alice"
   },
@@ -20,8 +24,32 @@
     "name": "Bearman"
   },
   {
+    "id": "benagore",
+    "name": "Benagore"
+  },
+  {
+    "id": "bernardo-ag",
+    "name": "BernardoAg_"
+  },
+  {
+    "id": "chris-bismire",
+    "name": "Chris Bismire"
+  },
+  {
+    "id": "curtis-easton",
+    "name": "Curtis Easton"
+  },
+  {
     "id": "dadio",
     "name": "dadio"
+  },
+  {
+    "id": "dave-stevens",
+    "name": "Dave Stevens"
+  },
+  {
+    "id": "downloadable-ram",
+    "name": "downloadable.ram"
   },
   {
     "id": "elektrobear",
@@ -30,6 +58,10 @@
   {
     "id": "evanski",
     "name": "Evanski"
+  },
+  {
+    "id": "freckles182",
+    "name": "freckles182"
   },
   {
     "id": "gaido",
@@ -44,6 +76,10 @@
     "name": "HayManMarc"
   },
   {
+    "id": "hazeymaiz",
+    "name": "hazeymaiz"
+  },
+  {
     "id": "hoani",
     "name": "hoani"
   },
@@ -52,8 +88,16 @@
     "name": "JackkRepublicc"
   },
   {
+    "id": "keysome",
+    "name": "Keysome"
+  },
+  {
     "id": "kitsune-faroe",
     "name": "Kitsune Faroe"
+  },
+  {
+    "id": "liam-jacobs",
+    "name": "Liam Jacobs"
   },
   {
     "id": "liriobirdon",
@@ -61,7 +105,12 @@
   },
   {
     "id": "lucas-schacht",
-    "name": "LucasSchachtMusic"
+    "name": "Lucas Schacht",
+    "aliases": ["LucasSchachtMusic"]
+  },
+  {
+    "id": "luis-gabriel",
+    "name": "Luis Gabriel"
   },
   {
     "id": "matthew-pattel",
@@ -88,8 +137,13 @@
     "name": "Misu"
   },
   {
+    "id": "mr-giff",
+    "name": "Mr Giff"
+  },
+  {
     "id": "mr-magnus",
-    "name": "Mr Magnus"
+    "name": "Mr. Magnus",
+    "spellings": ["Mr Magnus"]
   },
   {
     "id": "mustacheman",
@@ -108,12 +162,20 @@
     "name": "Poizen"
   },
   {
+    "id": "qassem",
+    "name": "قاسمقالمطور"
+  },
+  {
     "id": "respite",
     "name": "Respite"
   },
   {
     "id": "shadow-crystal",
     "name": "Shadow Crystal"
+  },
+  {
+    "id": "soapsud39",
+    "name": "SoapSud39"
   },
   {
     "id": "speedchuck",
@@ -128,11 +190,19 @@
     "name": "The M"
   },
   {
+    "id": "the-teturd",
+    "name": "TheTeturd"
+  },
+  {
     "id": "totally-average-gamez",
     "name": "TotallyAverageGamez"
   },
   {
     "id": "velha",
     "name": "Velha"
+  },
+  {
+    "id": "xer0botxer0",
+    "name": "Xer0botXer0"
   }
 ]
