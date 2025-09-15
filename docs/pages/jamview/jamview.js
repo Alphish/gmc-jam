@@ -100,10 +100,13 @@ function jamviewPopulateEntries(jam) {
 }
 
 function jamviewUnwrapEntry(entryData) {
-    let authors = entryData[2].map(authorData => {
+    let hasTeamName = typeof(entryData[2][0]) === "string";
+    let teamName = hasTeamName ? entryData[2][0] : undefined;
+    let authorsData = hasTeamName ? entryData[2].slice(1) : entryData[2];
+    let authors = authorsData.map(authorData => {
         return { id: authorData[0], name: authorData[1] };
     });
-    return { id: entryData[0], title: entryData[1], authors: authors };
+    return { id: entryData[0], title: entryData[1], teamName: teamName, authors: authors };
 }
 
 function jamviewUnwrapAward(awardData, entriesById) {
@@ -127,9 +130,10 @@ function jamviewMakeEntriesRow(tbody, label, entries, oddRow) {
         let row = tbody.insertRow();
         row.className = oddRow ? 'spanning-odd' : 'spanning-even';
         let authors = entry.authors.map(author => `${author.name}`).join(", ");
+        let team = entry.teamName ? `${entry.teamName} (${authors})` : authors;
 
         let firstCell = firstRow && label !== '' ? `<td class="entry-label-column" rowspan="${entries.length}">${label}</td>` : ``;
-        row.innerHTML = `${firstCell}<td>${entry.title}</td><td>${authors}</td>`;
+        row.innerHTML = `${firstCell}<td>${entry.title}</td><td>${team}</td>`;
 
         firstRow = false;
     }

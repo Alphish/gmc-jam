@@ -41,12 +41,12 @@ function JamDataGenerator() constructor {
             _writer.write_multiline_array(_jam.links, JamDataGenerator.write_link);
         }
         
-        if (!is_undefined(_jam.entries)) {
+        if (is_nonempty_array(_jam.entries)) {
             _next = _writer.write_key("entries", _next);
             _writer.write_multiline_array(_jam.entries, JamDataGenerator.write_entry);
         }
         
-        if (!is_undefined(_jam.ranking) || !is_undefined(_jam.awards)) {
+        if (is_nonempty_array(_jam.ranking) || is_nonempty_array(_jam.awards)) {
             _next = _writer.write_key("results", _next);
             write_results(_writer, _jam);
         }
@@ -84,15 +84,28 @@ function JamDataGenerator() constructor {
         _writer.write(",");
         _writer.write_string(_entry.name);
         _writer.write(",");
-        _writer.write_inline_array(_entry.team.authors, JamDataGenerator.write_author);
+        
+        var _team_members = variable_clone(_entry.team.authors, 1);
+        if (is_nonempty_string(_entry.team.name))
+            array_insert(_team_members, 0, _entry.team.name);
+        
+        _writer.write_inline_array(_team_members, JamDataGenerator.write_team_member);
+        
         _writer.write("]");
     }
     
-    static write_author = function(_writer, _author) {
+    static write_team_member = function(_writer, _member) {
+        if (is_string(_member)) {
+            // team name
+            _writer.write_string(_member);
+            return;
+        }
+        
+        // team author
         _writer.write("[");
-        _writer.write_string(_author.id);
+        _writer.write_string(_member.id);
         _writer.write(",");
-        _writer.write_string(_author.name);
+        _writer.write_string(_member.name);
         _writer.write("]");
     }
     
@@ -104,12 +117,12 @@ function JamDataGenerator() constructor {
         _writer.write("{");
         
         var _next = false;
-        if (!is_undefined(_jam.ranking)) {
+        if (is_nonempty_array(_jam.ranking)) {
             _next = _writer.write_key("ranking", _next);
             _writer.write_multiline_array(_jam.ranking, JamDataGenerator.write_entry_id);
         }
         
-        if (!is_undefined(_jam.awards)) {
+        if (is_nonempty_array(_jam.awards)) {
             _next = _writer.write_key("awards", _next);
             _writer.write_multiline_array(_jam.awards, JamDataGenerator.write_award);
         }

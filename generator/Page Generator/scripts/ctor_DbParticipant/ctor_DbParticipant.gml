@@ -3,4 +3,6 @@ function DbParticipant(_data) constructor {
     
     id = _data.id;
     name = _data.name;
+    aliases = _data[$ "aliases"] ?? [];
+    spellings = _data[$ "spellings"] ?? [];
 }
