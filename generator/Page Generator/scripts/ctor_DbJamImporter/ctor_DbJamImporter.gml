@@ -2,7 +2,7 @@ function DbJamImporter(_id, _jamdir) constructor {
     static dbjam_writer = new DbJamWriter();
     
     id = _id;
-    data = { id: _id };
+    data = { id: _id, ranking: undefined, awards: undefined };
     jam_directory = _jamdir;
     jam_path = $"{jam_directory}/jam.jaminfo";
     target_file = $"{Filesystem.instance.datafiles_directory}/{id}.jam.json";
@@ -28,6 +28,8 @@ function DbJamImporter(_id, _jamdir) constructor {
             process_entry(_path);
         else if (string_ends_with(_path, ".jamoverrides"))
             process_overrides(_path);
+        else if (string_ends_with(_path, ".jamresults"))
+            process_results(_path);
         else
             throw $"Cannot process file at path: {_path}";
         
@@ -59,6 +61,7 @@ function DbJamImporter(_id, _jamdir) constructor {
         });
         
         array_push(remaining_files, $"{jam_directory}/.jamtally/overrides.jamoverrides");
+        array_push(remaining_files, $"{jam_directory}/.jamtally/results.jamresults");
     }
     
     static process_entry = function(_path) {
@@ -73,7 +76,7 @@ function DbJamImporter(_id, _jamdir) constructor {
         _entry.team.authors = [];
         for (var i = 0, _count = array_length(_info.team.authors); i < _count; i++) {
             var _author = _info.team.authors[i];
-            var _data = get_author_data(_author);
+            var _data = get_author_data(_author.name);
             array_push(_entry.team.authors, _data);
         }
     }
@@ -92,10 +95,44 @@ function DbJamImporter(_id, _jamdir) constructor {
         }
     }
     
+    static process_results = function(_path) {
+        if (!file_exists(_path))
+            return;
+        
+        var _info = json_load(_path);
+        if (is_nonempty_array(_info[$ "ranking"])) {
+            data.ranking = array_map(_info.ranking, function(_jam_id) {
+                return data.entries_by_id[$ string_lower(_jam_id)];
+            });
+        }
+        
+        if (is_nonempty_array(_info[$ "awards"])) {
+            data.awards = array_map(_info.awards, method(self, DbJamImporter.get_award_data));
+        }
+    }
+    
+    static get_award_data = function(_info) {
+        var _result = {};
+        _result.id = _info.id;
+        _result.name = _info.name;
+        _result.awarded_to = _info[$ "awardedTo"];
+        if (_result.awarded_to == "participant") {
+            _result.winners = array_map(_info.winners, function (_participant) {
+                return get_author_data(_participant);
+            });
+        } else {
+            _result.winners = array_map(_info.winners, function(_jam_id) {
+                return data.entries_by_id[$ string_lower(_jam_id)];
+            });
+        }
+        
+        return _result;
+    }
+    
     static get_author_data = function(_author) {
-        var _participant_id = Database.instance.try_get_participant_id(_author.name);
+        var _participant_id = Database.instance.try_get_participant_id(_author);
         if (!is_undefined(_participant_id))
-            return { name: _author.name, id: _participant_id, participant: Database.get_participant(_participant_id) };
+            return { name: _author, id: _participant_id, participant: Database.get_participant(_participant_id) };
         
         show_debug_message($"Missing: {_author}");
         array_push(missing_authors, _author);
@@ -103,7 +140,6 @@ function DbJamImporter(_id, _jamdir) constructor {
     
     static write_data = function() {
         var _content = dbjam_writer.generate_content(data);
-        show_debug_message(_content);
         file_write_all_text(target_file, _content);
     }
 }

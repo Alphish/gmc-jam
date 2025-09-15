@@ -44,6 +44,11 @@ function DbJamWriter() constructor {
             _writer.write_multiline_array(_data.entries, DbJamWriter.write_entry);
         }
         
+        if (is_nonempty_array(_data.ranking) || is_nonempty_array(_data.awards)) {
+            _next = _writer.write_key("results", _next);
+            write_results(_writer, _data);
+        }
+        
         _writer.write("\n}");
         
         return _writer.get_content();
@@ -104,5 +109,55 @@ function DbJamWriter() constructor {
             _writer.write_string(_author.name);
             _writer.write("}");
         }
+    }
+    
+    // -------
+    // Results
+    // -------
+    
+    static write_results = function(_writer, _data) {
+        _writer.write("{");
+        
+        var _next = false;
+        if (is_nonempty_array(_data.ranking)) {
+            _next = _writer.write_key("ranking", _next);
+            _writer.write_multiline_array(_data.ranking, DbJamWriter.write_ranking_entry);
+        }
+        
+        if (is_nonempty_array(_data.awards)) {
+            _next = _writer.write_key("awards", _next);
+            _writer.write_multiline_array(_data.awards, DbJamWriter.write_award_entry);
+        }
+        
+        _writer.write("\n}");
+    }
+    
+    static write_ranking_entry = function(_writer, _entry) {
+        _writer.write_string(_entry.page_id);
+    }
+    
+    static write_award_entry = function(_writer, _entry) {
+        _writer.write("{");
+        _writer.write_key("id");
+        _writer.write_string(_entry.id);
+        _writer.write(",");
+        _writer.write_key("name");
+        _writer.write_string(_entry.name);
+        _writer.write(",");
+        _writer.write_key("winners");
+        
+        if (_entry.awarded_to == "participant") {
+            _writer.write_inline_array(_entry.winners, function(_writer, _winner) {
+                _writer.write_string(_winner.id);
+            });
+            _writer.write(",");
+            _writer.write_key("awardedTo");
+            _writer.write_string("participant");
+        } else {
+            _writer.write_inline_array(_entry.winners, function(_writer, _winner) {
+                _writer.write_string(_winner.page_id);
+            });
+        }
+        _writer.write("}");
     }
 }
