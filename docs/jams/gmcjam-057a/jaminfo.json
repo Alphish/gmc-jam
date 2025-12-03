@@ -1,8 +1,61 @@
 {
-"title": "GMC Jam 57",
+"title":"The Corntastic GMC Jam 57",
 "logoPath":"logo.png",
-"startTime": "2025-10-29T12:00:00.000Z",
-"endTime": "2025-11-03T12:00:00.000Z",
+"startTime":"2025-10-29T12:00:00Z",
+"endTime":"2025-11-03T12:00:00Z",
 "theme":"Something Borrowed",
-"hosts":["Misu","Alice"]
+"hosts":["Misu","Alice"],
+"links":[
+{"title":"Discussion topic","url":"https://forum.gamemaker.io/index.php?threads/the-corntastic-gmc-jam-57-games-topic.121431/"},
+{"title":"Games topic","url":"https://forum.gamemaker.io/index.php?threads/the-corntastic-gmc-jam-57-games-topic.121431/"},
+{"title":"Voting topic","url":"https://forum.gamemaker.io/index.php?threads/the-corntastic-gmc-jam-57-voting-topic.121502/"},
+{"title":"Results topic","url":"https://forum.gamemaker.io/index.php?threads/the-corntastic-gmc-jam-57-results.121731/"}
+],
+"entries":[
+["alone-in-the-woods","Alone in the Woods",[["evanski","Evanski"]]],
+["borrowed-worlds","Borrowed Worlds",[["alice","Alice"],["mavvy","Mavvy"]]],
+["borrowing-the-borrowed","Borrowing the Borrowed",[["bart","Bart"]]],
+["descent-into-the-abyss","Descent into the Abyss",[["overlord90098","Overlord90098"]]],
+["fish-food-ii","Fish Food II - The Dreadful Schemes of Loan Shark the Great",[["soapsud39","SoapSud39"]]],
+["hiriawanihtftdlbfsrmciuh","H.I.R.I.A.W.A.N.I.H.T.F.T.D.L.B.F.S.R.M.C.I.U.H",[["the-m","The M"]]],
+["herbalist-laboratory","Herbalist Laboratory",[["lucas-schacht","Lucas Schacht"]]],
+["hero","HERO",["jahmezz",["jahmezz","jahmezz"]]],
+["i-need-your-hammer","I need your hammer!",[["misu","Misu"]]],
+["jeffrey-takes-to-the-air","Jeffrey Takes to the Air",[["dave-stevens","Dave Stevens"]]],
+["let-me-just-use-this","Let Me Just Use This For A Second",[["gamedevdan","GameDevDan"]]],
+["liru","Liru",[["kitsune-faroe","KitsuneFaroe"]]],
+["official-police-business","Official police business!",[["tete-chin","Tete-chin"],["respite","Respite"]]],
+["once-upon-a-jumble","Once Upon a Jumble",[["liam-jacobs","Liam Jacobs"]]],
+["some-assembly-required","Some Assembly Required",[["poizen","Poizen"]]],
+["yoink","Yoink!",[["mercerenies","Mercerenies"]]]
+],
+"results":{
+"ranking":[
+"let-me-just-use-this",
+"once-upon-a-jumble",
+"fish-food-ii",
+"official-police-business",
+"liru",
+"hiriawanihtftdlbfsrmciuh",
+"alone-in-the-woods",
+"yoink",
+"some-assembly-required",
+"borrowed-worlds",
+"i-need-your-hammer",
+"hero",
+"jeffrey-takes-to-the-air",
+"descent-into-the-abyss",
+"borrowing-the-borrowed",
+"herbalist-laboratory"
+],
+"awards":[
+["theme","Best use of Theme",["fish-food-ii","let-me-just-use-this","once-upon-a-jumble"]],
+["concept","Best Concept",["once-upon-a-jumble"]],
+["story","Best Story",["once-upon-a-jumble"]],
+["visuals","Best Visuals",["let-me-just-use-this"]],
+["audio","Best Audio",["official-police-business"]],
+["ux","Best User Experience",["let-me-just-use-this"]],
+["reviewer","Best Reviewer",[{"id":"the-m","name":"The M"}],"participant"]
+]
+}
 }

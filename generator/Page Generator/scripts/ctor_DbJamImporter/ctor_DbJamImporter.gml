@@ -39,8 +39,8 @@ function DbJamImporter(_id, _jamdir) constructor {
     static process_jam = function(_path) {
         var _info = json_load(_path);
         data.title = _info[$ "title"];
-        data.start_time = _info[$ "startTime"];
-        data.end_time = _info[$ "endTime"];
+        data.start_time = process_time(_info[$ "startTime"]);
+        data.end_time = process_time(_info[$ "endTime"]);
         data.theme = _info[$ "theme"];
         data.links = _info[$ "links"];
         
@@ -62,6 +62,14 @@ function DbJamImporter(_id, _jamdir) constructor {
         
         array_push(remaining_files, $"{jam_directory}/.jamtally/overrides.jamoverrides");
         array_push(remaining_files, $"{jam_directory}/.jamtally/results.jamresults");
+    }
+    
+    static process_time = function(_time) {
+        if (string_ends_with(_time, "Z"))
+            return _time;
+        
+        var _segments = string_split(_time, "/");
+        return $"{_segments[2]}-{_segments[1]}-{_segments[0]}T12:00:00Z";
     }
     
     static process_entry = function(_path) {

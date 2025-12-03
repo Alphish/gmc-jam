@@ -93,7 +93,8 @@
   },
   {
     "id": "kitsune-faroe",
-    "name": "Kitsune Faroe"
+    "name": "Kitsune Faroe",
+    "aliases": ["KitsuneFaroe"]
   },
   {
     "id": "liam-jacobs",
@@ -204,5 +205,9 @@
   {
     "id": "xer0botxer0",
     "name": "Xer0botXer0"
+  },
+  {
+    "id": "jahmezz",
+    "name": "jahmezz"
   }
 ]
