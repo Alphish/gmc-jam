@@ -1,8 +1,7 @@
 function DbJamImporter(_id, _jamdir) constructor {
-    static dbjam_writer = new DbJamWriter();
-    
     id = _id;
     data = { id: _id, ranking: undefined, awards: undefined };
+    
     jam_directory = _jamdir;
     jam_path = $"{jam_directory}/jam.jaminfo";
     target_file = $"{Filesystem.instance.datafiles_directory}/{id}.jam.json";
@@ -17,7 +16,7 @@ function DbJamImporter(_id, _jamdir) constructor {
             if (array_length(missing_authors) > 0)
                 throw "Some authors could not be mapped to participant data. Make sure all participants are accounted for.";
             
-            write_data();
+            Database.complete_jam(id, data);
             return true;
         }
         
@@ -39,8 +38,8 @@ function DbJamImporter(_id, _jamdir) constructor {
     static process_jam = function(_path) {
         var _info = json_load(_path);
         data.title = _info[$ "title"];
-        data.start_time = process_time(_info[$ "startTime"]);
-        data.end_time = process_time(_info[$ "endTime"]);
+        data.startTime = process_time(_info[$ "startTime"]);
+        data.endTime = process_time(_info[$ "endTime"]);
         data.theme = _info[$ "theme"];
         data.links = _info[$ "links"];
         
@@ -75,7 +74,7 @@ function DbJamImporter(_id, _jamdir) constructor {
     static process_entry = function(_path) {
         var _info = json_load(_path);
         var _entry = array_shift(remaining_entries);
-        _entry.title = _info.title;
+        _entry.name = _info.title;
         
         _entry.team = {};
         if (is_nonempty_string(_info.team[$ "name"]))
@@ -99,7 +98,7 @@ function DbJamImporter(_id, _jamdir) constructor {
             var _jam_id = _entry_info.entryId;
             var _page_id = string_replace_all(_entry_info.tallyCode, "_", "-");
             var _entry = data.entries_by_id[$ string_lower(_jam_id)];
-            _entry.page_id = _page_id;
+            _entry.id = _page_id;
         }
     }
     
@@ -107,15 +106,17 @@ function DbJamImporter(_id, _jamdir) constructor {
         if (!file_exists(_path))
             return;
         
+        data.results = {};
+        
         var _info = json_load(_path);
         if (is_nonempty_array(_info[$ "ranking"])) {
-            data.ranking = array_map(_info.ranking, function(_jam_id) {
-                return data.entries_by_id[$ string_lower(_jam_id)];
+            data.results.ranking = array_map(_info.ranking, function(_jam_id) {
+                return data.entries_by_id[$ string_lower(_jam_id)].id;
             });
         }
         
         if (is_nonempty_array(_info[$ "awards"])) {
-            data.awards = array_map(_info.awards, method(self, DbJamImporter.get_award_data));
+            data.results.awards = array_map(_info.awards, method(self, DbJamImporter.get_award_data));
         }
     }
     
@@ -123,14 +124,14 @@ function DbJamImporter(_id, _jamdir) constructor {
         var _result = {};
         _result.id = _info.id;
         _result.name = _info.name;
-        _result.awarded_to = _info[$ "awardedTo"];
-        if (_result.awarded_to == "participant") {
+        _result.awardedTo = _info[$ "awardedTo"];
+        if (_result.awardedTo == "participant") {
             _result.winners = array_map(_info.winners, function (_participant) {
-                return get_author_data(_participant);
+                return get_author_data(_participant).id;
             });
         } else {
             _result.winners = array_map(_info.winners, function(_jam_id) {
-                return data.entries_by_id[$ string_lower(_jam_id)];
+                return data.entries_by_id[$ string_lower(_jam_id)].id;
             });
         }
         
@@ -140,14 +141,9 @@ function DbJamImporter(_id, _jamdir) constructor {
     static get_author_data = function(_author) {
         var _participant_id = Database.instance.try_get_participant_id(_author);
         if (!is_undefined(_participant_id))
-            return { name: _author, id: _participant_id, participant: Database.get_participant(_participant_id) };
+            return { alias: _author, id: _participant_id, participant: Database.get_participant(_participant_id) };
         
         show_debug_message($"Missing: {_author}");
         array_push(missing_authors, _author);
-    }
-    
-    static write_data = function() {
-        var _content = dbjam_writer.generate_content(data);
-        file_write_all_text(target_file, _content);
     }
 }

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ctor_JamInfoGenerator",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ctor_JamInfoGenerator",
+  "parent":{
+    "name":"Writing",
+    "path":"folders/Writing.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

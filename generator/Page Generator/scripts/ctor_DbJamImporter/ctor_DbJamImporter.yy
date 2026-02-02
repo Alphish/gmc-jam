@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"ctor_DbJamImporter",
   "parent":{
-    "name":"Import",
-    "path":"folders/Import.yy",
+    "name":"Database",
+    "path":"folders/Database.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"ctor_DbJamWriter",
   "parent":{
-    "name":"Import",
-    "path":"folders/Import.yy",
+    "name":"Writing",
+    "path":"folders/Writing.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

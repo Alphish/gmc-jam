@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"ctor_JamDataGenerator",
+  "%Name":"ctor_EntryInfoGenerator",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"ctor_JamDataGenerator",
+  "name":"ctor_EntryInfoGenerator",
   "parent":{
     "name":"Writing",
     "path":"folders/Writing.yy",

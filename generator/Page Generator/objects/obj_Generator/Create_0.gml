@@ -7,6 +7,8 @@ remaining_imports = [
 ];
 
 remaining_jam_files = filesystem.get_datafiles("*.jam.json");
-remaining_jams = [];
+remaining_jams = undefined;
 
-jam_generator = new JamDataGenerator();
+dbjam_writer = new DbJamWriter();
+jam_generator = new JamInfoGenerator();
+entry_generator = new EntryInfoGenerator();

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ctor_JsonWriterObjectScope",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ctor_JsonWriterObjectScope",
+  "parent":{
+    "name":"Json",
+    "path":"folders/Writing/Json.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

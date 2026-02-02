@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" media="screen" href="/pages/styles.css">
+    <link rel="stylesheet" media="screen" href="/pages/entryview/entryview.css">
+    <title>GMC Jam</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <div>
+        <a href="/jamlist.html" class="sidelink">List of Jams</a>
+        
+        <a href="/index.html" class="homelink">
+          <img src="/jamlogo.png">
+        </a>
+      </div>
+    </div>
+
+    <div class="content">
+        <div id="pending">
+            <h1 id="jam-title">...</h1>
+
+            <hr>
+
+            <div style="display: flex; width: 100%;">
+              <div class="details-logo-container">
+                <img id="entry-thumbnail" src="/jamlogo.png">
+              </div>
+              <div class="details-overview-container">
+                <table class="basic-table">
+                  <thead>
+                    <tr>
+                      <th colspan="2">Overview</th>
+                    </tr>
+                  </thead>
+                  <tbody id="overview-entries"></tbody>
+                </table>
+              </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        Website © Alice Jankowska 2024-2025, based on work of <a href="https://danjohnston.uk" target="_blank">Dan Johnston</a><br>
+        Images © Respective GMC Jam hosts and participants<br>
+        The website is not affiliated with YoYo Games or GameMaker
+    </div>
+
+    <script src="/pages/entryview/entryview.js"></script>
+  </body>
+</html>

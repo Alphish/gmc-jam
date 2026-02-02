@@ -1,7 +1,7 @@
-function jamviewPopulate(jam, jamFolder) {
+function jamviewPopulate(jamId, jam, jamFolder) {
     document.title = jam.title + " | GMC Jam";
     
-    let titleElement = document.getElementById("jamtitle");
+    let titleElement = document.getElementById("jam-title");
     titleElement.textContent = jam.title;
 
     if (jam.logoPath) {
@@ -12,8 +12,8 @@ function jamviewPopulate(jam, jamFolder) {
     jamviewPopulateOverview(jam);
 
     if (jam.entries) {
+        jamviewPopulateEntries(jamId, jam);
         document.getElementById("no-entries").remove();
-        jamviewPopulateEntries(jam);
     }
 
     let viewElement = document.getElementById("pending");
@@ -48,10 +48,8 @@ function jamviewPopulateOverview(jam) {
         addOverviewEntry(jam.hosts.length > 1 ? "Hosts" : "Host", jam.hosts.join(", "));
 
     if (jam.links) {
-        for (let link of jam.links) {
-            let linkRow = overviewEntries.insertRow();
-            linkRow.innerHTML = `<td colspan="2" class="overview-link"><a href="${link.url}" target="_blank">${link.title}</a></td>`;
-        }
+        let linkRows = jam.links.map(link => `<a href="${link.url}" target="_blank">${link.title}</a>`);
+        addOverviewEntry("Links", linkRows.join("<br/>"));
     }
 }
 
@@ -59,7 +57,7 @@ function jamviewPopulateOverview(jam) {
 // Entries
 // -------
 
-function jamviewPopulateEntries(jam) {
+function jamviewPopulateEntries(jamId, jam) {
     let entries = jam.entries.map(jamviewUnwrapEntry);
     let entriesById = {};
     for (let entry of entries) {
@@ -70,7 +68,7 @@ function jamviewPopulateEntries(jam) {
         let entriesTable = document.getElementById("all-entries");
         let oddRow = true;
         for (let entry of entries) {
-            jamviewMakeEntriesRow(entriesTable, "", entry, oddRow);
+            jamviewMakeEntriesRow(entriesTable, "", jamId, entry, oddRow);
             oddRow = !oddRow;
         }
         return;
@@ -80,21 +78,21 @@ function jamviewPopulateEntries(jam) {
     let rankingEntries = jam.results.ranking.map(entryId => entriesById[entryId]);
 
     let top3Table = document.getElementById("top3-entries");
-    jamviewMakeEntriesRow(top3Table, "🥇", rankingEntries[0], true);
-    jamviewMakeEntriesRow(top3Table, "🥈", rankingEntries[1], false);
-    jamviewMakeEntriesRow(top3Table, "🥉", rankingEntries[2], true);
+    jamviewMakeEntriesRow(top3Table, "🥇", jamId, rankingEntries[0], true);
+    jamviewMakeEntriesRow(top3Table, "🥈", jamId, rankingEntries[1], false);
+    jamviewMakeEntriesRow(top3Table, "🥉", jamId, rankingEntries[2], true);
 
     let rankingTable = document.getElementById("ranking-entries");
     let rank = 1;
     for (let entry of rankingEntries) {
-        jamviewMakeEntriesRow(rankingTable, getOrdinal(rank++), entry, rank % 2 == 1);
+        jamviewMakeEntriesRow(rankingTable, getOrdinal(rank++), jamId, entry, rank % 2 == 1);
     }
 
     let awardEntries = jam.results.awards.map(awardData => jamviewUnwrapAward(awardData, entriesById));
     let awardTable = document.getElementById("awards-entries");
     let oddRow = true;
     for (let award of awardEntries) {
-        jamviewMakeEntriesRow(awardTable, "🏆 " + award.name, award.winners, oddRow);
+        jamviewMakeEntriesRow(awardTable, "🏆 " + award.name, jamId, award.winners, oddRow);
         oddRow = !oddRow;
     }
 }
@@ -120,7 +118,7 @@ function jamviewUnwrapAward(awardData, entriesById) {
     return { id: awardData[0], name: awardData[1], winners: winners };
 }
 
-function jamviewMakeEntriesRow(tbody, label, entries, oddRow) {
+function jamviewMakeEntriesRow(tbody, label, jamId, entries, oddRow) {
     if (!Array.isArray(entries)) {
         entries = [entries];
     }
@@ -133,7 +131,8 @@ function jamviewMakeEntriesRow(tbody, label, entries, oddRow) {
         let team = entry.teamName ? `${entry.teamName} (${authors})` : authors;
 
         let firstCell = firstRow && label !== '' ? `<td class="entry-label-column" rowspan="${entries.length}">${label}</td>` : ``;
-        row.innerHTML = `${firstCell}<td>${entry.title}</td><td>${team}</td>`;
+        let entryCell = `<a href="/entryview.html?jam=${jamId}&entry=${entry.id}">${entry.title}</a>`;
+        row.innerHTML = `${firstCell}<td>${entryCell}</td><td>${team}</td>`;
 
         firstRow = false;
     }
@@ -172,7 +171,7 @@ if (!jamId) {
             else
                 throw new Error(`Could not retrieve jam data of '${jamId}'.`);
         })
-        .then(jam => jamviewPopulate(jam, jamFolder))
+        .then(jam => jamviewPopulate(jamId, jam, jamFolder))
         .catch(error => {
             document.title = "Unknown Jam | GMC Jam";
             console.error(error);
