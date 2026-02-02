@@ -1,6 +1,5 @@
-function DbJamAuthor(_data) constructor {
-    data = _data;
-    
-    id = _data.id;
-    name = _data.alias;
+function DbJamAuthor(_id) constructor {
+    id = _id;
+    participant = Database.get_participant(id);
+    name = participant.name;
 }

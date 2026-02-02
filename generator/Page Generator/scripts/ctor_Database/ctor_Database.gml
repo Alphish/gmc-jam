@@ -27,11 +27,6 @@ function Database() constructor {
         else
             participants_by_name[$ _key] = _participant;
     }
-    
-    static add_jam = function(_jam) {
-        array_push(jams, _jam);
-        jams_by_id[$ _jam.id] = _jam;
-    }
 }
 
 Database.instance = new Database();
@@ -54,4 +49,24 @@ Database.try_get_participant_id = function(_name) {
         return undefined;
     
     return Database.instance.participants_by_name[$ _name].id;
+}
+
+Database.get_or_stub_jam = function(_id) {
+    if (!struct_exists(Database.instance.jams_by_id, _id)) {
+        var _jam = new DbJam(_id);
+        array_push(Database.instance.jams, _jam);
+        Database.instance.jams_by_id[$ _id] = _jam;
+    }
+    
+    return Database.instance.jams_by_id[$ _id];
+}
+
+Database.populate_jam = function(_id, _data) {
+    var _jam = Database.get_or_stub_jam(_id);
+    _jam.populate_from_data(_data);
+}
+
+Database.complete_jam = function(_id, _data) {
+    var _jam = Database.get_or_stub_jam(_id);
+    _jam.complete_from_data(_data);
 }
