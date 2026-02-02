@@ -42,6 +42,7 @@
     {"id":{"name":"ctor_DbJamTeam","path":"scripts/ctor_DbJamTeam/ctor_DbJamTeam.yy",},},
     {"id":{"name":"ctor_DbJamWriter","path":"scripts/ctor_DbJamWriter/ctor_DbJamWriter.yy",},},
     {"id":{"name":"ctor_DbParticipant","path":"scripts/ctor_DbParticipant/ctor_DbParticipant.yy",},},
+    {"id":{"name":"ctor_EntryInfoGenerator","path":"scripts/ctor_EntryInfoGenerator/ctor_EntryInfoGenerator.yy",},},
     {"id":{"name":"ctor_Filesystem","path":"scripts/ctor_Filesystem/ctor_Filesystem.yy",},},
     {"id":{"name":"ctor_JamInfoGenerator","path":"scripts/ctor_JamInfoGenerator/ctor_JamInfoGenerator.yy",},},
     {"id":{"name":"ctor_JsonWriter","path":"scripts/ctor_JsonWriter/ctor_JsonWriter.yy",},},
