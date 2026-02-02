@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"ctor_DbJamWriter",
+  "%Name":"ctor_JamInfoGenerator",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"ctor_DbJamWriter",
+  "name":"ctor_JamInfoGenerator",
   "parent":{
     "name":"Writing",
     "path":"folders/Writing.yy",

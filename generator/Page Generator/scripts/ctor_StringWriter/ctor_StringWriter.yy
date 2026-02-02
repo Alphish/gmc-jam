@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"ctor_StringWriter",
   "parent":{
-    "name":"Writing",
-    "path":"folders/Writing.yy",
+    "name":"Json",
+    "path":"folders/Writing/Json.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

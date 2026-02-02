@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"ctor_JamDataGenerator",
+  "%Name":"ctor_JsonWriterObjectScope",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"ctor_JamDataGenerator",
+  "name":"ctor_JsonWriterObjectScope",
   "parent":{
-    "name":"Writing",
-    "path":"folders/Writing.yy",
+    "name":"Json",
+    "path":"folders/Writing/Json.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

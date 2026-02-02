@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"ctor_DbJamWriter",
+  "%Name":"ctor_JsonWriterArrayScope",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"ctor_DbJamWriter",
+  "name":"ctor_JsonWriterArrayScope",
   "parent":{
-    "name":"Writing",
-    "path":"folders/Writing.yy",
+    "name":"Json",
+    "path":"folders/Writing/Json.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

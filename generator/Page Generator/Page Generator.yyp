@@ -15,6 +15,7 @@
     {"$GMFolder":"","%Name":"Import","folderPath":"folders/Import.yy","name":"Import","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Utils","folderPath":"folders/Utils.yy","name":"Utils","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Writing","folderPath":"folders/Writing.yy","name":"Writing","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Json","folderPath":"folders/Writing/Json.yy","name":"Json","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "ForcedPrefabProjectReferences":[],
   "IncludedFiles":[
@@ -26,7 +27,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.1.210",
+    "IDEVersion":"2024.14.3.217",
   },
   "name":"Page Generator",
   "resources":[
@@ -42,8 +43,11 @@
     {"id":{"name":"ctor_DbJamWriter","path":"scripts/ctor_DbJamWriter/ctor_DbJamWriter.yy",},},
     {"id":{"name":"ctor_DbParticipant","path":"scripts/ctor_DbParticipant/ctor_DbParticipant.yy",},},
     {"id":{"name":"ctor_Filesystem","path":"scripts/ctor_Filesystem/ctor_Filesystem.yy",},},
-    {"id":{"name":"ctor_JamDataGenerator","path":"scripts/ctor_JamDataGenerator/ctor_JamDataGenerator.yy",},},
+    {"id":{"name":"ctor_JamInfoGenerator","path":"scripts/ctor_JamInfoGenerator/ctor_JamInfoGenerator.yy",},},
     {"id":{"name":"ctor_JsonWriter","path":"scripts/ctor_JsonWriter/ctor_JsonWriter.yy",},},
+    {"id":{"name":"ctor_JsonWriterArrayScope","path":"scripts/ctor_JsonWriterArrayScope/ctor_JsonWriterArrayScope.yy",},},
+    {"id":{"name":"ctor_JsonWriterObjectScope","path":"scripts/ctor_JsonWriterObjectScope/ctor_JsonWriterObjectScope.yy",},},
+    {"id":{"name":"ctor_JsonWriterScope","path":"scripts/ctor_JsonWriterScope/ctor_JsonWriterScope.yy",},},
     {"id":{"name":"ctor_StringWriter","path":"scripts/ctor_StringWriter/ctor_StringWriter.yy",},},
     {"id":{"name":"utils_Array","path":"scripts/utils_Array/utils_Array.yy",},},
     {"id":{"name":"utils_File","path":"scripts/utils_File/utils_File.yy",},},
