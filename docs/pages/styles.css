@@ -161,3 +161,42 @@ table.basic-table tr:last-child td:last-child {
 table.basic-table td, table.basic-table th {
     padding: 0.375rem 1rem;
 }
+
+/***********/
+/* DETAILS */
+/***********/
+
+.details-logo-container {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    padding: 1rem;
+}
+
+.details-logo-container img {
+    width: 100%;
+    object-fit: scale-down;
+}
+
+.details-overview-container {
+    flex-grow: 1;
+}
+
+.details-overview-container td {
+    flex-grow: 1;
+    padding: 0.25rem 0.5rem;
+}
+
+.details-overview-container tr .overview-label {
+    font-weight: bold;
+    text-align: right;
+}
+
+.details-overview-container tr .overview-value {
+    text-align: left;
+}
+
+.details-overview-container tr .overview-link {
+    text-align: center;
+}
+
