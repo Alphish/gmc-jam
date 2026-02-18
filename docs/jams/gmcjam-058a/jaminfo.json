@@ -1,9 +1,11 @@
 {
-"title":"GMC Jam 58",
+"title":"The Sugar-Coated GMC Jam 58",
+"logoPath":"logo.png",
 "startTime":"2026-02-18T12:00:00Z",
 "endTime":"2026-02-23T12:00:00Z",
-"theme":"???",
+"theme":"Chaotically Fun",
 "hosts":["Misu","Alice"],
 "links":[
+{"title":"Discussion topic","url":"https://forum.gamemaker.io/index.php?threads/the-sugar-coated-gmc-jam-58-discussion-thread.122307/"}
 ]
 }
