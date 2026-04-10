@@ -1,0 +1,64 @@
+{
+"id":"gmcjam-058a",
+"title":"The Sugar-Coated GMC Jam 58",
+"shortTitle":"GMC Jam 58",
+"startTime":"2026-02-18T12:00:00Z",
+"endTime":"2026-02-23T12:00:00Z",
+"theme":"CHAOTICALLY FUN",
+"hosts":["misu","alice"],
+"links":[
+{"title":"Discussion thread","url":"https://forum.gamemaker.io/index.php?threads/the-sugar-coated-gmc-jam-58-discussion-thread.122307/"},
+{"title":"Games topic","url":"https://forum.gamemaker.io/index.php?threads/the-sugar-coated-gmc-jam-58-games-topic.122578/"},
+{"title":"Voting topic","url":"https://forum.gamemaker.io/index.php?threads/the-sugar-coated-gmc-jam-58-voting-topic.122628/"},
+{"title":"Results topic","url":"https://forum.gamemaker.io/index.php?threads/the-sugar-coated-gmc-jam-58-results.122847/"}
+],
+"entries":[
+{"id":"bitrealm","name":"BitRealm","team":["liam-jacobs"]},
+{"id":"captain-chemistry","name":"Captain Chemistry and the Argon Pirates","team":["mercerenies"]},
+{"id":"cart-corraller","name":"Cart Corraller","team":["liriobirdon"]},
+{"id":"gm-skate","name":"GM Skate","team":["bart"]},
+{"id":"heartstorm","name":"Heartstorm","team":["alice","poizen"]},
+{"id":"herding-cats","name":"Herding Cats","team":["the-digital-fish"]},
+{"id":"high-seas-o-treasure","name":"High Seas o' Treasure","team":{"name":"[the color of rain]","authors":["raechel","noa-mora","kyana-mora"]}},
+{"id":"i-just-wanted-to-get-something-nice","name":"I Just Wanted To Get Something Nice","team":["mavvy"]},
+{"id":"jam-blasters","name":"Jam Blasters","team":["lukan"]},
+{"id":"llamamamajama","name":"LlamaMamaJama","team":["haymanmarc"]},
+{"id":"llamapalooza","name":"Llamapalooza!","team":["kitsune-faroe","misu","pando"]},
+{"id":"quest-for-the-golden-carrot","name":"The Tale of Bunnearus the Peasant and the Quest for the Golden Carrot","team":["soapsud39"]},
+{"id":"snorble-mania","name":"Snorble Mania","team":["lucas-schacht"]},
+{"id":"them-hordes","name":"Them Hordes","team":["the-m"]},
+{"id":"vertex-heaven","name":"Vertex Heaven","team":["snail-dream"]},
+{"id":"vinyl-fight","name":"Vinyl Fight","team":["nal"]},
+{"id":"whatever-the-weather","name":"Whatever the weather","team":{"name":"Blu Cru","authors":["tete-chin","respite","v-j"]}}
+],
+"results":{
+"ranking":[
+"quest-for-the-golden-carrot",
+"captain-chemistry",
+"herding-cats",
+"llamapalooza",
+"bitrealm",
+"heartstorm",
+"snorble-mania",
+"vertex-heaven",
+"vinyl-fight",
+"high-seas-o-treasure",
+"whatever-the-weather",
+"llamamamajama",
+"them-hordes",
+"i-just-wanted-to-get-something-nice",
+"cart-corraller",
+"gm-skate",
+"jam-blasters"
+],
+"awards":[
+{"id":"theme","name":"Best use of Theme","winners":["llamapalooza"]},
+{"id":"concept","name":"Best Concept","winners":["captain-chemistry","vertex-heaven"]},
+{"id":"story","name":"Best Story","winners":["heartstorm"]},
+{"id":"visuals","name":"Best Visuals","winners":["quest-for-the-golden-carrot"]},
+{"id":"audio","name":"Best Audio","winners":["vinyl-fight"]},
+{"id":"ux","name":"Best User Experience","winners":["quest-for-the-golden-carrot"]},
+{"id":"reviewer","name":"Best Reviewer","winners":["alice"],"awardedTo":"participant"}
+]
+}
+}
