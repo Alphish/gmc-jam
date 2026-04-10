@@ -1,3 +1,5 @@
+import { getOrdinal, addOverviewEntry, createPageList, createJamLink, createParticipantLink } from "./common.js";
+
 function entryviewPopulate(entry, jamFolder) {
     document.title = entry.title + " | GMC Jam";
 
@@ -21,41 +23,24 @@ function entryviewPopulate(entry, jamFolder) {
 
 function entryviewPopulateOverview(entry) {
     let overviewEntries = document.getElementById("overview-entries");
-    let addOverviewEntry = function(label, value) {
-        let row = overviewEntries.insertRow();
-        row.innerHTML = 
-            `<td class="overview-label">${label}:</td>` +
-            `<td class="overview-value">${value}</td>`;
-    }
-
     if (entry.team)
-        addOverviewEntry("Team", entry.team);
+        addOverviewEntry(overviewEntries, "Team", entry.team);
 
-    if (entry.authors) {
-        let authorElements = entry.authors.map(authorData => {
-            return `${authorData[1]}`;
-        });
-        addOverviewEntry(authorElements.length > 1 ? "Authors" : "Author", authorElements.join(", "));
-    }
+    let authorElements = entry.authors.map(authorData => createParticipantLink(authorData[0], authorData[1]));
+    addOverviewEntry(overviewEntries, authorElements.length > 1 ? "Authors" : "Author", authorElements.join(", "));
 
-    if (entry.jam) {
-        let jamLink = `<a href="/jamview.html?id=${entry.jam[0]}">${entry.jam[1]}</a>`;
-        addOverviewEntry("Jam", jamLink);
-    }
+    addOverviewEntry(overviewEntries, "Jam", createJamLink(entry.jam[0], entry.jam[1]));
 
-    if (entry.rank) {
-        addOverviewEntry("Rank", getRankDescription(entry.rank));
-    }
+    if (entry.rank)
+        addOverviewEntry(overviewEntries, "Rank", getRankDescription(entry.rank));
 
     if (entry.awards) {
         let awardsRows = entry.awards.map(award => "🏆 " + award[1]);
-        addOverviewEntry("Awards", awardsRows.join("<br/>"));
+        addOverviewEntry(overviewEntries, "Awards", awardsRows.join("<br/>"));
     }
 
-    if (entry.links) {
-        let linkRows = entry.links.map(link => `<a href="${link.url}" target="_blank">${link.title}</a>`);
-        addOverviewEntry("Links", linkRows.join("<br/>"));
-    }
+    if (entry.links)
+        addOverviewEntry(overviewEntries, "Links", createPageList(entry.links));
 }
 
 function getRankDescription(rank) {
@@ -65,19 +50,8 @@ function getRankDescription(rank) {
         return "🥈 2nd";
     else if (rank == 3)
         return "🥉 3rd";
-
-    let mod10 = rank % 10;
-    let mod100 = rank % 100;
-    if (mod100 >= 11 && mod100 <= 20)
-        return `${rank}th`;
-    else if (mod10 == 1)
-        return `${rank}st`;
-    else if (mod10 == 2)
-        return `${rank}nd`;
-    else if (mod10 == 3)
-        return `${rank}rd`;
     else
-        return `${rank}th`;
+        return getOrdinal(rank);
 }
 
 // -----
