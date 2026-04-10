@@ -1,0 +1,26 @@
+table.basic-table tbody .rank-1st {
+    background-color: #4c3c18;
+    color: #ddaa22;
+}
+
+table.basic-table tbody .rank-2nd {
+    background-color: #606870;
+    color: #ddffff;
+}
+
+table.basic-table tbody .rank-3rd {
+    background-color: #4c3010;
+    color: #dd8822;
+}
+
+table.basic-table tbody .rank-1st a {
+    color: #ddaa22;
+}
+
+table.basic-table tbody .rank-2nd a {
+    color: #ddffff;
+}
+
+table.basic-table tbody .rank-3rd a {
+    color: #dd8822;
+}
