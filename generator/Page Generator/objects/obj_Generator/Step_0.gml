@@ -3,6 +3,7 @@ if (array_length(remaining_participant_files) > 0) {
     var _participants_data = json_load(_file);
     var _participants = array_map(_participants_data, function(_data) { return new DbParticipant(_data); });
     database.add_participants(_participants);
+    array_foreach(_participants, function(_participant) { array_push(remaining_participants, _participant); });
     show_debug_message("Loaded participants from " + _file);
     return;
 }
@@ -28,6 +29,7 @@ if (is_undefined(remaining_jams))
 
 if (array_length(remaining_jams) > 0) {
     var _jam = array_shift(remaining_jams);
+    _jam.link_participant_entries();
     var _db_content = dbjam_writer.generate_content(_jam);
     file_write_all_text(_jam.target_file, _db_content);
     
@@ -40,5 +42,13 @@ if (array_length(remaining_jams) > 0) {
         file_write_all_text(_jam.info_directory + _entry.id + ".entry.json", _entry_content);
     }
     show_debug_message("Generated data for jam " + _jam.title);
+    return;
+}
+
+if (array_length(remaining_participants) > 0) {
+    var _participant = array_shift(remaining_participants);
+    var _content = participant_generator.generate_content(_participant);
+    file_write_all_text(_participant.export_filename, _content);
+    show_debug_message("Generated data for participant " + _participant.name);
     return;
 }

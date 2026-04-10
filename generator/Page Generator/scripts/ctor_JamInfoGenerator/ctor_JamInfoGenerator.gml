@@ -5,6 +5,7 @@ function JamInfoGenerator() constructor {
         _writer.begin_multiline_object();
         
         _writer.write_string_entry_if_any("title", _jam.title);
+        _writer.write_string_entry_if_any("shortTitle", _jam.short_title);
         _writer.write_string_entry_if_any("logoPath", _jam.logo_path);
         _writer.write_string_entry_if_any("startTime", _jam.start_time);
         _writer.write_string_entry_if_any("endTime", _jam.end_time);

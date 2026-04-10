@@ -27,7 +27,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.3.217",
+    "IDEVersion":"2024.14.4.221",
   },
   "name":"Page Generator",
   "resources":[
@@ -39,6 +39,7 @@
     {"id":{"name":"ctor_DbJamAward","path":"scripts/ctor_DbJamAward/ctor_DbJamAward.yy",},},
     {"id":{"name":"ctor_DbJamEntry","path":"scripts/ctor_DbJamEntry/ctor_DbJamEntry.yy",},},
     {"id":{"name":"ctor_DbJamImporter","path":"scripts/ctor_DbJamImporter/ctor_DbJamImporter.yy",},},
+    {"id":{"name":"ctor_DbJamParticipantSummary","path":"scripts/ctor_DbJamParticipantSummary/ctor_DbJamParticipantSummary.yy",},},
     {"id":{"name":"ctor_DbJamTeam","path":"scripts/ctor_DbJamTeam/ctor_DbJamTeam.yy",},},
     {"id":{"name":"ctor_DbJamWriter","path":"scripts/ctor_DbJamWriter/ctor_DbJamWriter.yy",},},
     {"id":{"name":"ctor_DbParticipant","path":"scripts/ctor_DbParticipant/ctor_DbParticipant.yy",},},
@@ -49,6 +50,7 @@
     {"id":{"name":"ctor_JsonWriterArrayScope","path":"scripts/ctor_JsonWriterArrayScope/ctor_JsonWriterArrayScope.yy",},},
     {"id":{"name":"ctor_JsonWriterObjectScope","path":"scripts/ctor_JsonWriterObjectScope/ctor_JsonWriterObjectScope.yy",},},
     {"id":{"name":"ctor_JsonWriterScope","path":"scripts/ctor_JsonWriterScope/ctor_JsonWriterScope.yy",},},
+    {"id":{"name":"ctor_ParticipantInfoGenerator","path":"scripts/ctor_ParticipantInfoGenerator/ctor_ParticipantInfoGenerator.yy",},},
     {"id":{"name":"ctor_StringWriter","path":"scripts/ctor_StringWriter/ctor_StringWriter.yy",},},
     {"id":{"name":"utils_Array","path":"scripts/utils_Array/utils_Array.yy",},},
     {"id":{"name":"utils_File","path":"scripts/utils_File/utils_File.yy",},},
