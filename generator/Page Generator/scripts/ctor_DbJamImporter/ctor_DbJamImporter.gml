@@ -64,11 +64,14 @@ function DbJamImporter(_id, _jamdir) constructor {
     }
     
     static process_time = function(_time) {
-        if (string_ends_with(_time, "Z"))
+        if (string_ends_with(_time, "Z")) {
             return _time;
-        
-        var _segments = string_split(_time, "/");
-        return $"{_segments[2]}-{_segments[1]}-{_segments[0]}T12:00:00Z";
+        } else if (string_pos("-", _time) > 0) {
+            return $"{_time}T12:00:00Z";
+        } else {
+            var _segments = string_split(_time, "/");
+            return $"{_segments[2]}-{_segments[1]}-{_segments[0]}T12:00:00Z";
+        }
     }
     
     static process_entry = function(_path) {

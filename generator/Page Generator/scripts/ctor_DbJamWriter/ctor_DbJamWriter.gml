@@ -6,6 +6,7 @@ function DbJamWriter() constructor {
         
         _writer.write_string_entry_if_any("id", _data.id);
         _writer.write_string_entry_if_any("title", _data.title);
+        _writer.write_string_entry_if_any("shortTitle", _data.short_title);
         _writer.write_string_entry_if_any("startTime", _data.start_time);
         _writer.write_string_entry_if_any("endTime", _data.end_time);
         _writer.write_string_entry_if_any("theme", _data.theme);
