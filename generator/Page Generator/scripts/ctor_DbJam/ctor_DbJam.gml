@@ -4,6 +4,7 @@ function DbJam(_id) constructor {
     target_file = $"{Filesystem.instance.datafiles_directory}/{id}.jam.json";
     
     title = undefined;
+    short_title = undefined;
     logo_path = file_exists(info_directory + "logo.png") ? "logo.png" : undefined;
     start_time = undefined;
     end_time = undefined;
@@ -17,6 +18,7 @@ function DbJam(_id) constructor {
     
     static populate_from_data = function(_data) {
         title = _data[$ "title"] ?? title;
+        short_title = _data[$ "shortTitle"] ?? short_title;
         start_time = _data[$ "startTime"] ?? start_time;
         end_time = _data[$ "endTime"] ?? end_time;
         theme = _data[$ "theme"] ?? theme;
@@ -86,6 +88,44 @@ function DbJam(_id) constructor {
             for (var j = 0, _wincount = array_length(_award.winners); j < _wincount; j++) {
                 array_push(_award.winners[j].awards, { id: _award.id, name: _award.name });
             }
+        }
+    }
+    
+    static link_participant_entries = function() {
+        var _participant_awards = {};
+        
+        // preparing participant awards
+        for (var i = 0, _count = array_length(awards ?? []); i < _count; i++) {
+            var _award = awards[i];
+            if (_award.awarded_to != "participant")
+                continue;
+            
+            for (var j = 0, _wincount = array_length(_award.winners); j < _wincount; j++) {
+                var _winner = _award.winners[j];
+                _participant_awards[$ _winner.id] ??= [];
+                array_push(_participant_awards[$ _winner.id], { id: _award.id, name: _award.name });
+            }
+        }
+        
+        // populating relevant participants with jam entries
+        for (var i = 0, _count = array_length(ranking ?? entries ?? []); i < _count; i++) {
+            var _entry = ranking[i];
+            for (var j = 0, _acount = array_length(_entry.team.authors); j < _acount; j++) {
+                var _jam_author = _entry.team.authors[j];
+                var _participant = _jam_author.participant;
+                var _jam_summary = _participant.get_or_stub_jam_summary(self);
+                _jam_summary.add_entry_row(_entry, _participant_awards[$ _participant.id]);
+                struct_remove(_participant_awards, _participant.id);
+            }
+        };
+        
+        // adding rows for outstanding participant awards, when no entry was added
+        var _names = struct_get_names(_participant_awards);
+        for (var i = 0, _count = array_length(_names); i < _count; i++) {
+            var _name = _names[i];
+            var _participant = Database.get_participant(_name);
+            var _jam_summary = _participant.get_or_stub_jam_summary(self);
+            _jam_summary.add_entry_row(undefined, _participant_awards[$ _name]);
         }
     }
 }

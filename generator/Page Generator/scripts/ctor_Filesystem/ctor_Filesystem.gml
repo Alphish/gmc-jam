@@ -12,6 +12,10 @@ function Filesystem() constructor {
     static get_jam_directory = function(_id) {
         return $"{Filesystem.instance.docs_directory}jams\\{_id}\\";
     }
+    
+    static get_participant_filename = function(_id) {
+        return $"{Filesystem.instance.docs_directory}participants\\{_id}.participant.json";
+    }
 }
 
 Filesystem.instance = new Filesystem();

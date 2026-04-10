@@ -1,3 +1,5 @@
+import { getOrdinal, addOverviewEntry, createPageList, createEntryLink, createParticipantLink } from "./common.js";
+
 function jamviewPopulate(jamId, jam, jamFolder) {
     document.title = jam.title + " | GMC Jam";
     
@@ -26,31 +28,23 @@ function jamviewPopulate(jamId, jam, jamFolder) {
 
 function jamviewPopulateOverview(jam) {
     let overviewEntries = document.getElementById("overview-entries");
-    let addOverviewEntry = function(label, value) {
-        let row = overviewEntries.insertRow();
-        row.innerHTML = 
-            `<td class="overview-label">${label}:</td>` +
-            `<td class="overview-value">${value}</td>`;
-    }
 
     if (jam.startTime) {
         let from = new Date(jam.startTime);
         let fromText = from.getDate().toString().padStart(2, "0") + "/" + (from.getMonth() + 1).toString().padStart(2, "0") + "/" + (from.getFullYear() % 100);
         let to = new Date(jam.endTime);
         let toText = to.getDate().toString().padStart(2, "0") + "/" + (to.getMonth() + 1).toString().padStart(2, "0") + "/" + (to.getFullYear() % 100);
-        addOverviewEntry("Timeframe", `${fromText} - ${toText}`);
+        addOverviewEntry(overviewEntries, "Timeframe", `${fromText} - ${toText}`);
     }
     
     if (jam.theme)
-        addOverviewEntry("Theme", jam.theme);
+        addOverviewEntry(overviewEntries, "Theme", jam.theme);
 
     if (jam.hosts)
-        addOverviewEntry(jam.hosts.length > 1 ? "Hosts" : "Host", jam.hosts.join(", "));
+        addOverviewEntry(overviewEntries, jam.hosts.length > 1 ? "Hosts" : "Host", jam.hosts.join(", "));
 
-    if (jam.links) {
-        let linkRows = jam.links.map(link => `<a href="${link.url}" target="_blank">${link.title}</a>`);
-        addOverviewEntry("Links", linkRows.join("<br/>"));
-    }
+    if (jam.links)
+        addOverviewEntry(overviewEntries, "Links", createPageList(jam.links));
 }
 
 // -------
@@ -113,7 +107,7 @@ function jamviewUnwrapAward(awardData, entriesById) {
     if (awardedEntity === 'entry') {
         winners = awardData[2].map(entryId => entriesById[entryId]);
     } else {
-        winners = awardData[2].map(participant => ({ id: participant.id, title: participant.name, authors: []}));
+        winners = awardData[2].map(participant => ({ id: participant.id, title: participant.name }));
     }
     return { id: awardData[0], name: awardData[1], winners: winners };
 }
@@ -127,30 +121,16 @@ function jamviewMakeEntriesRow(tbody, label, jamId, entries, oddRow) {
     for (let entry of entries) {
         let row = tbody.insertRow();
         row.className = oddRow ? 'spanning-odd' : 'spanning-even';
-        let authors = entry.authors.map(author => `${author.name}`).join(", ");
-        let team = entry.teamName ? `${entry.teamName} (${authors})` : authors;
 
         let firstCell = firstRow && label !== '' ? `<td class="entry-label-column" rowspan="${entries.length}">${label}</td>` : ``;
-        let entryCell = `<a href="/entryview.html?jam=${jamId}&entry=${entry.id}">${entry.title}</a>`;
+        let entryCell = entry.authors ? createEntryLink(jamId, entry.id, entry.title) : createParticipantLink(entry.id, entry.title);
+        let authors = entry.authors ? entry.authors.map(author => createParticipantLink(author.id, author.name)).join(", ") : "";
+        let team = entry.teamName ? `${entry.teamName} (${authors})` : authors;
+
         row.innerHTML = `${firstCell}<td>${entryCell}</td><td>${team}</td>`;
 
         firstRow = false;
     }
-}
-
-function getOrdinal(rank) {
-    let mod10 = rank % 10;
-    let mod100 = rank % 100;
-    if (mod100 >= 11 && mod100 <= 20)
-        return `${rank}th`;
-    else if (mod10 == 1)
-        return `${rank}st`;
-    else if (mod10 == 2)
-        return `${rank}nd`;
-    else if (mod10 == 3)
-        return `${rank}rd`;
-    else
-        return `${rank}th`;
 }
 
 // -----
