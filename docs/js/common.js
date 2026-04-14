@@ -13,6 +13,18 @@ export function getOrdinal(rank) {
         return `${rank}th`;
 }
 
+// --------
+// Elements
+// --------
+
+export function showId(id) {
+    document.getElementById(id).style.visibility = "visible";
+}
+
+export function removeId(id) {
+    document.getElementById(id).remove();
+}
+
 // -----
 // Links
 // -----

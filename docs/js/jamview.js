@@ -1,4 +1,4 @@
-import { getOrdinal, addOverviewEntry, createPageList, createEntryLink, createParticipantLink } from "./common.js";
+import { getOrdinal, addOverviewEntry, createPageList, createEntryLink, createParticipantLink, showId, removeId } from "./common.js";
 
 function jamviewPopulate(jamId, jam, jamFolder) {
     document.title = jam.title + " | GMC Jam";
@@ -6,20 +6,22 @@ function jamviewPopulate(jamId, jam, jamFolder) {
     let titleElement = document.getElementById("jam-title");
     titleElement.textContent = jam.title;
 
-    if (jam.logoPath) {
-        let logoElement = document.getElementById("jam-logo");
-        logoElement.src = jamFolder + jam.logoPath;
-    }
+    let logoElement = document.getElementById("jam-logo");
+    logoElement.src = jam.logoPath ? jamFolder + jam.logoPath : "/jamlogo.png";
+    logoElement.style.visibility = "visible";
 
     jamviewPopulateOverview(jam);
 
     if (jam.entries) {
         jamviewPopulateEntries(jamId, jam);
-        document.getElementById("no-entries").remove();
+        removeId("no-entries");
+    } else {
+        showId("no-entries");
+        removeId("unrank-entries");
+        removeId("rank-entries");
     }
 
-    let viewElement = document.getElementById("pending");
-    viewElement.style.visibility = "visible";
+    showId("pending");
 }
 
 // --------
@@ -65,10 +67,11 @@ function jamviewPopulateEntries(jamId, jam) {
             jamviewMakeEntriesRow(entriesTable, "", jamId, entry, oddRow);
             oddRow = !oddRow;
         }
+        showId("unrank-entries");
+        removeId("rank-entries");
         return;
     }
 
-    document.getElementById("unrank-entries").remove();
     let rankingEntries = jam.results.ranking.map(entryId => entriesById[entryId]);
 
     let top3Table = document.getElementById("top3-entries");
@@ -89,6 +92,9 @@ function jamviewPopulateEntries(jamId, jam) {
         jamviewMakeEntriesRow(awardTable, "🏆 " + award.name, jamId, award.winners, oddRow);
         oddRow = !oddRow;
     }
+
+    removeId("unrank-entries");
+    showId("rank-entries");
 }
 
 function jamviewUnwrapEntry(entryData) {

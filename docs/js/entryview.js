@@ -1,4 +1,4 @@
-import { getOrdinal, addOverviewEntry, createPageList, createJamLink, createParticipantLink } from "./common.js";
+import { getOrdinal, addOverviewEntry, createPageList, createJamLink, createParticipantLink, showId } from "./common.js";
 
 function entryviewPopulate(entry, jamFolder) {
     document.title = entry.title + " | GMC Jam";
@@ -6,15 +6,13 @@ function entryviewPopulate(entry, jamFolder) {
     let titleElement = document.getElementById("jam-title");
     titleElement.textContent = entry.title;
 
-    if (entry.thumbnailPath) {
-        let thumbnailElement = document.getElementById("entry-thumbnail");
-        thumbnailElement.src = jamFolder + entry.thumbnailPath;
-    }
+    let thumbnailElement = document.getElementById("entry-thumbnail");
+    thumbnailElement.src = entry.thumbnailPath ? jamFolder + entry.thumbnailPath : "/jamlogo.png";
+    thumbnailElement.style.visibility = "visible";
 
     entryviewPopulateOverview(entry);
 
-    let viewElement = document.getElementById("pending");
-    viewElement.style.visibility = "visible";
+    showId("pending");
 }
 
 // --------
