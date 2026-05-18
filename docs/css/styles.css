@@ -60,7 +60,8 @@ hr {
 }
 
 .navbar .sidelink {
-    padding: 0.5rem 1rem;
+    margin: 0rem 0.25rem;
+    padding: 0.5rem 0.5rem;
     color: #c5c5c5;
 }
 
