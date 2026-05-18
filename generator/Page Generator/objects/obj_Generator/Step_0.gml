@@ -79,3 +79,11 @@ if (!trophies_exported) {
     trophies_exported = true;
     return;
 }
+
+if (array_length(remaining_pages) > 0) {
+    var _pagedata = array_shift(remaining_pages);
+    var _page_content = file_read_all_text($"{filesystem.datafiles_directory}pages\\{_pagedata.page}.content.html");
+    var _file_content = html_page_generator.generate_content(_page_content, _pagedata);
+    file_write_all_text($"{filesystem.docs_directory}{_pagedata.page}.html", _file_content);
+    show_debug_message($"Generated HTML page {_pagedata.page}");
+}
