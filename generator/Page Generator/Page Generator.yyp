@@ -12,7 +12,7 @@
   "Folders":[
     {"$GMFolder":"","%Name":"Database","folderPath":"folders/Database.yy","name":"Database","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Filesystem","folderPath":"folders/Filesystem.yy","name":"Filesystem","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"Import","folderPath":"folders/Import.yy","name":"Import","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Pages","folderPath":"folders/Pages.yy","name":"Pages","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Utils","folderPath":"folders/Utils.yy","name":"Utils","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Writing","folderPath":"folders/Writing.yy","name":"Writing","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Json","folderPath":"folders/Writing/Json.yy","name":"Json","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -53,6 +53,7 @@
     {"id":{"name":"ctor_JsonWriterScope","path":"scripts/ctor_JsonWriterScope/ctor_JsonWriterScope.yy",},},
     {"id":{"name":"ctor_ParticipantInfoGenerator","path":"scripts/ctor_ParticipantInfoGenerator/ctor_ParticipantInfoGenerator.yy",},},
     {"id":{"name":"ctor_StringWriter","path":"scripts/ctor_StringWriter/ctor_StringWriter.yy",},},
+    {"id":{"name":"ctor_TrophyInfoGenerator","path":"scripts/ctor_TrophyInfoGenerator/ctor_TrophyInfoGenerator.yy",},},
     {"id":{"name":"utils_Array","path":"scripts/utils_Array/utils_Array.yy",},},
     {"id":{"name":"utils_File","path":"scripts/utils_File/utils_File.yy",},},
     {"id":{"name":"utils_Json","path":"scripts/utils_Json/utils_Json.yy",},},
