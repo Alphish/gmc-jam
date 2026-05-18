@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ctor_HtmlPageData",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ctor_HtmlPageData",
+  "parent":{
+    "name":"Pages",
+    "path":"folders/Pages.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,81 @@
+.hof-note {
+    font-size: 0.9rem;
+    color: #9a9a9a;
+}
+
+.basic-table thead tr {
+    border-bottom: #3d3d3d solid 1px;
+}
+
+.hof-rank {
+    text-align: center;
+    width: 2em;
+}
+
+.hof-participant {
+    text-align: left;
+}
+
+.hof-wins, .hof-2nds, .hof-3rds, .hof-awards {
+    text-align: center;
+    width: 5rem;
+}
+
+.hof-awards {
+    width: 6rem;
+}
+
+.hof-separator {
+    background-color: #1c1c1c;
+    text-align: center;
+    font-size: 1.125rem;
+    font-weight: bold;
+}
+
+/*********
+ * TOP 3 *
+ *********/
+
+#hof-participants tr:nth-child(2) {
+    background-color: #4c3c18;
+    color: #ddaa22;
+}
+
+#hof-participants tr:nth-child(3) {
+    background-color: #606870;
+    color: #ddffff;
+}
+
+#hof-participants tr:nth-child(4) {
+    background-color: #4c3010;
+    color: #dd8822;
+}
+
+#hof-participants tr:nth-child(2) a {
+    color: #ddaa22;
+}
+
+#hof-participants tr:nth-child(3) a {
+    color: #ddffff;
+}
+
+#hof-participants tr:nth-child(4) a {
+    color: #dd8822;
+}
+
+.zero-value {
+    color: #777777;
+}
+
+#hof-participants tr:nth-child(2) .zero-value {
+    color: #ddaa22;
+}
+
+#hof-participants tr:nth-child(3) .zero-value {
+    color: #ddffff;
+}
+
+#hof-participants tr:nth-child(4) .zero-value {
+    color: #dd8822;
+}
+

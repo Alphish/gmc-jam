@@ -52,3 +52,38 @@ if (array_length(remaining_participants) > 0) {
     show_debug_message("Generated data for participant " + _participant.name);
     return;
 }
+
+if (!trophies_exported) {
+    var _trophies_participants = array_filter(Database.instance.participants, function(_participant) {
+        return _participant.has_trophy();
+    });
+    array_sort(_trophies_participants, function(_left, _right) {
+        var _left_trophies = _left.trophy_info;
+        var _right_trophies = _right.trophy_info;
+        if (_left_trophies[0] != _right_trophies[0])
+            return _right_trophies[0] - _left_trophies[0];
+        else if (_left_trophies[1] != _right_trophies[1])
+            return _right_trophies[1] - _left_trophies[1];
+        else if (_left_trophies[2] != _right_trophies[2])
+            return _right_trophies[2] - _left_trophies[2];
+        else if (_left_trophies[3] != _right_trophies[3])
+            return _right_trophies[3] - _left_trophies[3];
+        else
+            return string_upper(_left_trophies[4]) < string_upper(_right_trophies[4]) ? -1 : 1;
+    });
+    
+    var _content = trophy_generator.generate_content(_trophies_participants);
+    file_write_all_text(filesystem.get_trophies_filename(), _content);
+    
+    show_debug_message("Generated trophies data");
+    trophies_exported = true;
+    return;
+}
+
+if (array_length(remaining_pages) > 0) {
+    var _pagedata = array_shift(remaining_pages);
+    var _page_content = file_read_all_text($"{filesystem.datafiles_directory}pages\\{_pagedata.page}.content.html");
+    var _file_content = html_page_generator.generate_content(_page_content, _pagedata);
+    file_write_all_text($"{filesystem.docs_directory}{_pagedata.page}.html", _file_content);
+    show_debug_message($"Generated HTML page {_pagedata.page}");
+}

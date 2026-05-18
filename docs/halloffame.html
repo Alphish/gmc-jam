@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Hall of Fame | GMC Jam</title>
+    <link rel="modulepreload" href="/js/common.js" />
+    <link rel="modulepreload" href="/js/halloffame.js" />
+    <link rel="stylesheet" media="screen" href="/css/styles.css">
+    <link rel="stylesheet" media="screen" href="/css/halloffame.css">
+  </head>
+  <body>
+    <div class="navbar">
+      <div>
+        <a href="/halloffame.html" class="sidelink">Hall of Fame</a>
+        <span>|</span>
+        <a href="/jamlist.html" class="sidelink">List of Jams</a>
+        <a href="/index.html" class="homelink">
+          <img src="/jamlogo.png">
+        </a>
+      </div>
+    </div>
+    <div class="content">
+      <h1>Hall of Fame</h1>
+      <p>Below are listed GMC Jam participants who ever won a top 3 rank or a "Best of" award.</p>
+      <p class="hof-note">Only mainline GMC Jams are counted (i.e. not Demake-a-Classic Jam). The ranks are incomplete, covering only jams 55-58. More jams will be added over time.</p>
+      <table class="basic-table">
+        <thead>
+          <tr>
+            <th class="hof-rank">Rank</th>
+            <th class="hof-participant">Participant</th>
+            <th class="hof-wins">🥇 Wins</th>
+            <th class="hof-2nds">🥈 2nds</th>
+            <th class="hof-3rds">🥉 3rds</th>
+            <th class="hof-awards">📜 Awards</th>
+          </tr>
+        </thead>
+        <tbody id="hof-participants"></tbody>
+      </table>
+      
+    </div>
+    <div class="footer">
+      Website © Alice Jankowska 2024-2026, based on work of <a href="https://danjohnston.uk" target="_blank">Dan Johnston</a><br>
+      Images © Respective GMC Jam hosts and participants<br>
+      The website is not affiliated with YoYo Games or GameMaker
+    </div>
+    <script src="/js/halloffame.js" type="module"></script>
+  </body>
+</html>

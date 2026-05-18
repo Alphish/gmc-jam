@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ctor_TrophyInfoGenerator",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ctor_TrophyInfoGenerator",
+  "parent":{
+    "name":"Writing",
+    "path":"folders/Writing.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

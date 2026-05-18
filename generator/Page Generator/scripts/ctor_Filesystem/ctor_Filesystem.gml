@@ -16,6 +16,10 @@ function Filesystem() constructor {
     static get_participant_filename = function(_id) {
         return $"{Filesystem.instance.docs_directory}participants\\{_id}.participant.json";
     }
+    
+    static get_trophies_filename = function() {
+        return $"{Filesystem.instance.docs_directory}jams\\trophies.json";
+    }
 }
 
 Filesystem.instance = new Filesystem();
