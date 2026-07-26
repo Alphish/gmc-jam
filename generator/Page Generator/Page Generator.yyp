@@ -24,6 +24,7 @@
     {"$GMIncludedFile":"","%Name":"gmcjam-056a.jam.json","CopyToMask":-1,"filePath":"datafiles","name":"gmcjam-056a.jam.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"gmcjam-057a.jam.json","CopyToMask":-1,"filePath":"datafiles","name":"gmcjam-057a.jam.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"gmcjam-058a.jam.json","CopyToMask":-1,"filePath":"datafiles","name":"gmcjam-058a.jam.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"gmcjam-059a.jam.json","CopyToMask":-1,"filePath":"datafiles","name":"gmcjam-059a.jam.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"common.template.html","CopyToMask":-1,"filePath":"datafiles/pages","name":"common.template.html","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"entryview.content.html","CopyToMask":-1,"filePath":"datafiles/pages","name":"entryview.content.html","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"halloffame.content.html","CopyToMask":-1,"filePath":"datafiles/pages","name":"halloffame.content.html","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
@@ -35,7 +36,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.4.222",
+    "IDEVersion":"2026.0.0.16",
   },
   "name":"Page Generator",
   "resources":[

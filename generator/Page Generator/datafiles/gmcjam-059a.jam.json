@@ -1,0 +1,57 @@
+{
+"id":"gmcjam-059a",
+"title":"The Aquatic GMC Jam 59",
+"startTime":"2026-06-17T12:00:00Z",
+"endTime":"2026-06-22T12:00:00Z",
+"theme":"EVERY CORNER",
+"hosts":["misu","alice"],
+"links":[
+{"title":"Discussion Thread","url":"https://forum.gamemaker.io/index.php?threads/the-aquatic-gmc-jam-59-discussion-thread.123426/"},
+{"title":"Games Topic","url":"https://forum.gamemaker.io/index.php?threads/the-aquatic-gmc-jam-59-games-topic.123799/"},
+{"title":"Voting Topic","url":"https://forum.gamemaker.io/index.php?threads/the-aquatic-gmc-jam-59-voting-topic.123853/"},
+{"title":"Results Topic","url":"https://forum.gamemaker.io/index.php?threads/the-aquatic-gmc-jam-59-results.124021/"}
+],
+"entries":[
+{"id":"alabama-jim","name":"Alabama Jim & The Mysteries Around Every Corner","team":{"name":"Team Donut","authors":["haymanmarc","micah-ds",{"id":"lucas-schacht","alias":"LucasSchachtMusic"}]}},
+{"id":"bourdaire","name":"Bourdaire","team":{"name":"Mattorigus","authors":["liam-jacobs","april-hooley","matt-bell"]}},
+{"id":"check-every-corner","name":"Check Every Corner","team":["jackk-republicc","miami-masochist"]},
+{"id":"constellations-in-the-sea","name":"Constellations in the sea","team":["tete-chin","respite"]},
+{"id":"crop-corner","name":"Crop Corner","team":["liriobirdon"]},
+{"id":"eelhook-dx","name":"EelHook DX","team":["mavvy"]},
+{"id":"explore-every-corner","name":"EXPLORE EVERY CORNER","team":[{"id":"overlord90098","alias":"Curtis"}]},
+{"id":"fruit-punch","name":"Fruit Punch","team":["poizen"]},
+{"id":"islands","name":"Islands","team":["nessa"]},
+{"id":"philosophers-cube","name":"Philosopher's Cube","team":["alice","misu","bart"]},
+{"id":"submarine-team","name":"Submarine Team","team":["giraffeman210"]},
+{"id":"tessellation-nation","name":"Tessellation Nation","team":["mercerenies"]},
+{"id":"transient-decay","name":"Transient Decay","team":["evanski"]},
+{"id":"dvd-logo","name":"You Wouldn't Steal An Idle Game About The DVD Logo","team":[{"id":"allison-james","alias":"Allison J James"}]}
+],
+"results":{
+"ranking":[
+"fruit-punch",
+"tessellation-nation",
+"check-every-corner",
+"bourdaire",
+"alabama-jim",
+"islands",
+"eelhook-dx",
+"philosophers-cube",
+"constellations-in-the-sea",
+"submarine-team",
+"explore-every-corner",
+"transient-decay",
+"dvd-logo",
+"crop-corner"
+],
+"awards":[
+{"id":"theme","name":"Best use of Theme","winners":["dvd-logo"]},
+{"id":"concept","name":"Best Concept","winners":["tessellation-nation"]},
+{"id":"story","name":"Best Story","winners":["bourdaire"]},
+{"id":"visuals","name":"Best Visuals","winners":["islands"]},
+{"id":"audio","name":"Best Audio","winners":["alabama-jim"]},
+{"id":"ux","name":"Best User Experience","winners":["check-every-corner"]},
+{"id":"reviewer","name":"Best Reviewer","winners":["misu"],"awardedTo":"participant"}
+]
+}
+}

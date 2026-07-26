@@ -28,7 +28,7 @@
 {"id":"snorble-mania","name":"Snorble Mania","team":["lucas-schacht"]},
 {"id":"them-hordes","name":"Them Hordes","team":["the-m"]},
 {"id":"vertex-heaven","name":"Vertex Heaven","team":["snail-dream"]},
-{"id":"vinyl-fight","name":"Vinyl Fight","team":["nal"]},
+{"id":"vinyl-fight","name":"Vinyl Fight","team":[{"id":"allison-james","alias":"NAL"}]},
 {"id":"whatever-the-weather","name":"Whatever the weather","team":{"name":"Blu Cru","authors":["tete-chin","respite","v-j"]}}
 ],
 "results":{

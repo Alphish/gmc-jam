@@ -9,11 +9,16 @@
   },
   {
     "id": "allison-james",
-    "name": "Allison James"
+    "name": "Allison James",
+    "aliases": ["Allison J James", "NAL"]
   },
   {
     "id": "anglerman",
     "name": "Anglerman"
+  },
+  {
+    "id": "april-hooley",
+    "name": "April Hooley"
   },
   {
     "id": "bart",
@@ -72,6 +77,10 @@
     "name": "GameDevDan"
   },
   {
+    "id": "giraffeman210",
+    "name": "Giraffeman210"
+  },
+  {
     "id": "haymanmarc",
     "name": "HayManMarc"
   },
@@ -122,6 +131,10 @@
     "name": "Lukan"
   },
   {
+    "id": "matt-bell",
+    "name": "Matt Bell"
+  },
+  {
     "id": "matthew-pattel",
     "name": "MatthewPattel"
   },
@@ -132,6 +145,10 @@
   {
     "id": "mercerenies",
     "name": "Mercerenies"
+  },
+  {
+    "id": "miami-masochist",
+    "name": "MiamiMasochist"
   },
   {
     "id": "micah-ds",
@@ -159,12 +176,12 @@
     "name": "mustacheman"
   },
   {
-    "id": "nal",
-    "name": "NAL"
-  },
-  {
     "id": "nana-moon",
     "name": "Nana Moon"
+  },
+  {
+    "id": "nessa",
+    "name": "Nessa"
   },
   {
     "id": "noa-mora",
@@ -172,7 +189,8 @@
   },
   {
     "id": "overlord90098",
-    "name": "Overlord90098"
+    "name": "Overlord90098",
+    "aliases": ["Curtis"]
   },
   {
     "id": "pando",

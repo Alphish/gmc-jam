@@ -1,9 +1,56 @@
 {
-"title":"GMC Jam 59",
+"title":"The Aquatic GMC Jam 59",
 "startTime":"2026-06-17T12:00:00Z",
 "endTime":"2026-06-22T12:00:00Z",
-"theme":"???",
+"theme":"EVERY CORNER",
 "hosts":["Misu","Alice"],
 "links":[
+{"title":"Discussion Thread","url":"https://forum.gamemaker.io/index.php?threads/the-aquatic-gmc-jam-59-discussion-thread.123426/"},
+{"title":"Games Topic","url":"https://forum.gamemaker.io/index.php?threads/the-aquatic-gmc-jam-59-games-topic.123799/"},
+{"title":"Voting Topic","url":"https://forum.gamemaker.io/index.php?threads/the-aquatic-gmc-jam-59-voting-topic.123853/"},
+{"title":"Results Topic","url":"https://forum.gamemaker.io/index.php?threads/the-aquatic-gmc-jam-59-results.124021/"}
+],
+"entries":[
+["alabama-jim","Alabama Jim & The Mysteries Around Every Corner",["Team Donut",["haymanmarc","HayManMarc"],["micah-ds","Micah_DS"],["lucas-schacht","LucasSchachtMusic"]]],
+["bourdaire","Bourdaire",["Mattorigus",["liam-jacobs","Liam Jacobs"],["april-hooley","April Hooley"],["matt-bell","Matt Bell"]]],
+["check-every-corner","Check Every Corner",[["jackk-republicc","JackkRepublicc"],["miami-masochist","MiamiMasochist"]]],
+["constellations-in-the-sea","Constellations in the sea",[["tete-chin","Tete-chin"],["respite","Respite"]]],
+["crop-corner","Crop Corner",[["liriobirdon","Liriobirdon"]]],
+["eelhook-dx","EelHook DX",[["mavvy","Mavvy"]]],
+["explore-every-corner","EXPLORE EVERY CORNER",[["overlord90098","Curtis"]]],
+["fruit-punch","Fruit Punch",[["poizen","Poizen"]]],
+["islands","Islands",[["nessa","Nessa"]]],
+["philosophers-cube","Philosopher's Cube",[["alice","Alice"],["misu","Misu"],["bart","Bart"]]],
+["submarine-team","Submarine Team",[["giraffeman210","Giraffeman210"]]],
+["tessellation-nation","Tessellation Nation",[["mercerenies","Mercerenies"]]],
+["transient-decay","Transient Decay",[["evanski","Evanski"]]],
+["dvd-logo","You Wouldn't Steal An Idle Game About The DVD Logo",[["allison-james","Allison J James"]]]
+],
+"results":{
+"ranking":[
+"fruit-punch",
+"tessellation-nation",
+"check-every-corner",
+"bourdaire",
+"alabama-jim",
+"islands",
+"eelhook-dx",
+"philosophers-cube",
+"constellations-in-the-sea",
+"submarine-team",
+"explore-every-corner",
+"transient-decay",
+"dvd-logo",
+"crop-corner"
+],
+"awards":[
+["theme","Best use of Theme",["dvd-logo"]],
+["concept","Best Concept",["tessellation-nation"]],
+["story","Best Story",["bourdaire"]],
+["visuals","Best Visuals",["islands"]],
+["audio","Best Audio",["alabama-jim"]],
+["ux","Best User Experience",["check-every-corner"]],
+["reviewer","Best Reviewer",[{"id":"misu","name":"Misu"}],"participant"]
 ]
+}
 }
